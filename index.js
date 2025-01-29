@@ -1,5 +1,7 @@
 console.log("start");
 
+// keyword tarike "var no use ochho thay jyare let ane const no use badhare thay"
+
 var a = 20;
 let b = 30;
 b = 50;
