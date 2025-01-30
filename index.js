@@ -24,3 +24,5 @@ const e = "20";
 let s = 10;
 console.log(j + e - s);
 console.log(Number(j) + Number(e) - s);
+
+
