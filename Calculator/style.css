@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.BTNsum {
+  height: 40px;
+  width: 150px;
+  background-color: antiquewhite;
+  border: none;
+  font-size: 20px;
+  color: blue;
+ margin-top: 30px;
+ border-radius: 10px;
+}
