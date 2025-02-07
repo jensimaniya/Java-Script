@@ -1,20 +1,12 @@
-let course = "red ";
-let n = course.length;
+function containsVowel(str) {
+  let vowels = "aeiou";
 
-for (let i = 0; i < n; i++) {
-  if (
-    course[i] == "a" &&
-    course[i] == "e" &&
-    course[i] == "i" &&
-    course[i] == "o" &&
-      course[i] == "u")
-  {
-    console.log("true");
-    
+  for (let char of str.toLowerCase()) {
+    if (vowels.includes(char)) {
+      return true;
     }
-  else {
-      console.log("false");
-      
-    }
+  }
+
+  return false;
 }
-
+console.log(containsVowel("red"));
