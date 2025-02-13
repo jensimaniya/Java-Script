@@ -28,20 +28,29 @@ let student = {
       number: 8901,
     },
   ],
+
+  sum: () => {
+    console.log(student.friends[0].number);
+    
+  }
+
+
 };
 
-console.log(student.add.city);
+student.sum();
 
-let n = student.skills.length;
-console.log(n);
+// console.log(student.add.city);
 
-for (let i = 0; i < n; i++)
-{
-    console.log(student.skills[i]);
+// let n = student.skills.length;
+// console.log(n);
+
+// for (let i = 0; i < n; i++)
+// {
+//     console.log(student.skills[i]);
     
-}
+// }
 
-console.log(student.friends[2].course);
+// console.log(student.friends[2].course);
 
 
 
