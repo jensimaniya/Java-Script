@@ -31,27 +31,19 @@ let student = {
 
   sum: () => {
     console.log(student.friends[0].number);
-    
-  }
-
-
+  },
 };
 
 student.sum();
 
-// console.log(student.add.city);
+console.log(student.add.city);
 
-// let n = student.skills.length;
-// console.log(n);
+let n = student.skills.length;
+console.log(n);
 
-// for (let i = 0; i < n; i++)
-// {
-//     console.log(student.skills[i]);
-    
-// }
+for (let i = 0; i < n; i++) {
+  console.log(student.skills[i]);
+}
 
-// console.log(student.friends[2].course);
-
-
-
-
+console.log(student.friends[2].course);
+console.log(student.friends[1].name);

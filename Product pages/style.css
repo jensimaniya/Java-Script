@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.img {
+  width: 200px;
+  height: 260px;
+ 
+  margin-bottom: 30px;
+  transition: transform 2s ease;
+}
+.img:hover{
+  
+    transform: scale(1.1);
+
+}
+.title {
+  text-align: center;
+}
+
+.price {
+  text-align: center;
+}
+
+.rate {
+  text-align: center;
+}
+
+.box {
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 700px;
+  background-color: aliceblue;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  
+  padding: 40px;
+}
+  
+
+.BTNbuy{
+    height: 50px;
+    width: 150px;
+    
+    border: none;
+    border-radius: 20px;
+    background-color: lightgray;
+    font-size: 30px;
+    
+}
+
+.BTNDiv{
+    display: flex;
+   
+    
+    justify-content: center;
+}
+
+.ImgDiv{
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .TitleDiv{
+    height: 80px;
+}
+
+.PriceDiv{
+    height: 80px;
+} */
