@@ -280,7 +280,7 @@ let data = [
   },
 ];
 
-let temp = ""
+let temp = " "
 
 for (let i = 0; i < data.length; i++)
 {
@@ -289,7 +289,7 @@ for (let i = 0; i < data.length; i++)
         <div class="ImgDiv"><img src=${data[i].image} alt="" class="img"> </div>
         <div class="TitleDiv"><h2 class="title">${data[i].title}</h2></div>
        <div class="PriceDiv"> <p class="price">${data[i].price}</p></div>
-        <p class="rate">${data[i].rating.rate}</p>
+        <div class="RateDiv"><p class="rate">${data[i].rating.rate}</p></div>
         <div class="BTNDiv"><button class="BTNbuy">Buy</button></div>
     </div>
     </div>`;

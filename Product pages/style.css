@@ -20,6 +20,10 @@
   text-align: center;
 }
 
+.title:hover{
+  color: darkgrey;
+}
+
 .price {
   text-align: center;
 }
@@ -31,7 +35,7 @@
 .box {
   border: 2px solid black;
   border-radius: 10px;
-  height: 700px;
+  height: 720px;
   background-color: aliceblue;
 }
 
@@ -55,12 +59,12 @@
     
 }
 
-.BTNDiv{
-    display: flex;
-   
-    
-    justify-content: center;
+.BTNbuy:hover{
+  border: 2px solid black;
+  background-color: azure;
 }
+
+
 
 .ImgDiv{
     height: 360px;
@@ -69,10 +73,23 @@
     align-items: center;
 }
 
-/* .TitleDiv{
-    height: 80px;
+ .TitleDiv{
+    height: 170px;
 }
 
 .PriceDiv{
-    height: 80px;
-} */
+    height: 50px;
+} 
+
+.RateDiv{
+  height: 50px;
+
+}
+
+
+.BTNDiv{
+    display: flex;
+   
+    
+    justify-content: center;
+}
