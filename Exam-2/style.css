@@ -1,17 +1,91 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.box{
-    border: 2px solid red;
-    border-radius: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .contact{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  
+    background-color:  rgb(237, 173, 183);
+    padding: 30px;
+}
+
+.box {
+  border: 2px solid red;
+  border-radius: 15px;
+  background-color: azure;
+  height: 900px;
+
+}
+
+/* .contact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+} */
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.head:hover {
+  color: darkblue;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  transition: transform 2s ease;
+  padding: 10px;
+}
+
+.img:hover {
+  transform: scale(1.1);
+}
+
+.BTNcart{
+    height: 50px;
+    width: 150px;
+    border: none;
+    background-color: lightpink;
+     font-size: 25px;
+     border-radius: 20px;
+     transition: transform 2s ease;
+
+}
+
+.BTNcart:hover{
+    background-color: darkslateblue;
+    border: 3px solid lightpink;
+     transform: scale(1.1);
+}
+
+.BTNDiv{
+    display: flex;
+  justify-content: center;
+  margin: 30px;
+ 
+
 }
