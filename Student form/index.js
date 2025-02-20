@@ -1,41 +1,52 @@
 let students = [];
 
+function allDelete() {
+  students = [];
+  uiMaker();
+}
+
+
+
+const handleDelete = (index) => {
+  students.splice(index, 1);
+  uiMaker();
+};
 
 const uiMaker = () => {
-    students.map((student1) => {
-        let td1 = document.createElement("td");
-        td1.innerHTML=student1.name;
+  document.getElementById("tablebody").innerHTML = " ";
+  students.map((student1, i) => {
+    let td1 = document.createElement("td");
+    td1.innerHTML = student1.name;
 
-        let td2 = document.createElement("td");
-        td2.innerHTML=student1.number;
+    let td2 = document.createElement("td");
+    td2.innerHTML = student1.number;
 
-         let td3 = document.createElement("td");
-        td3.innerHTML=student1.email;
+    let td3 = document.createElement("td");
+    td3.innerHTML = student1.email;
 
-         let img = document.createElement("img");
-        img.src = student1.image
-        let td4 = document.createElement("td");
-        td4.append(img);
+    let img = document.createElement("img");
+    img.src = student1.image;
+    let td4 = document.createElement("td");
+    td4.append(img);
 
+    let td5 = document.createElement("td");
+    td5.innerHTML = student1.course;
 
-        let td5 = document.createElement("td");
-        td5.innerHTML=student1.course;
+    let td6 = document.createElement("td");
+    td6.innerHTML = student1.fee;
 
+    let but = document.createElement("button");
+    but.innerHTML = "button";
+    let td7 = document.createElement("td");
+    td7.append(but);
 
-        let td6 = document.createElement("td");
-        td6.innerHTML=student1.fee;
+    but.addEventListener("click", () => handleDelete(i));
 
-        let but = document.createElement("button");
-        but.innerHTML = "button";
-        let td7 = document.createElement("td");
-        td7.append(but);
-
-        let tr = document.createElement("tr");
-        tr.append(td1, td2, td3, td4, td5, td6, td7);
-        document.getElementById("tablebody").append(tr);
-
-    });
-}
+    let tr = document.createElement("tr");
+    tr.append(td1, td2, td3, td4, td5, td6, td7);
+    document.getElementById("tablebody").append(tr);
+  });
+};
 
 const handlesubmit = (e) => {
   e.preventDefault();
@@ -55,12 +66,10 @@ const handlesubmit = (e) => {
     fee: fee,
   };
 
-    students.push(student);
-    // console.log(students);
+  students.push(student);
+  // console.log(students);
 
-    uiMaker();
-
-    
+  uiMaker();
 };
 
 document.getElementById("student").addEventListener("submit", handlesubmit);
