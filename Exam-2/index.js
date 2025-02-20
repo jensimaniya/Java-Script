@@ -1778,14 +1778,18 @@ for (let i = 0; i < products.length; i++) {
   temp += `
     <div class="col-lg-4 col-md-6 py-4">
     <div class="box ">
+    
       <div class="head"><h1>${products[i].title}</h1></div>
       <div class="description"><p>${products[i].description}</p></div>
       <div class="title"><h3>${products[i].category}</h3></div>
       <div class="title"><h3>${products[i].price}</h3></div>
       <div class="title"><h3>${products[i].discountPercentage}</h3></div>
+
+
       <div class="title"><h2 class=${
         products[i].rating > 3 ? "green" : "red"
-      } > ${products[i].rating}</h2></div>
+    } > ${products[i].rating}</h2></div>
+      
      <div class="title"> <h3>${products[i].stock}</h3></div>
       <div class="img"> <img src="${products[i].thumbnail}" alt="" /></div>
       <div class="BTNDiv"><button class="BTNcart">Add Cart</button></div>
