@@ -1,4 +1,4 @@
-// console.log(Math.max(10,20,30,40,50,60,70,80,90,100));
+console.log(Math.max(10,20,30,40,50,60,70,80,90,100));
 
 // console.log(Math.min(10,20,30,40,50));
 
@@ -14,9 +14,3 @@
 // console.log(Math.random());
 
 // console.log(Math.random()*4);
-
-
-console.log(Math.round(Math.random()*10000));
-
-
-
