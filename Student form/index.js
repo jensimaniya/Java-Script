@@ -1,14 +1,13 @@
 let students = [];
 
+// delete all data mate
 function allDelete() {
   students = [];
   uiMaker();
 }
 
-
-
-const handleDelete = (index) => {
-  students.splice(index, 1);
+const handleDelete = (i) => {
+  students.splice(i, 1);
   uiMaker();
 };
 

@@ -17,20 +17,57 @@
 
   </head>
   <body>
-    <form id="student" class="m-5">
-      <input type="text" id="name" /> 
-      <input type="number" id="number" /> 
-      <input type="email" id="email" /> 
-      <input type="url" id="image" />
-      <select name="" id="course">
-        
-        <option value="">Select</option>
+    <form id="student" class="form mt-5">
+      <h3 class="head">Add Your Detail </h3>
+      <div class="MainDiv">
+        <div>
+          <div class="FormDiv">
+            
+        <label for="">Name : </label>
+      <input type="text" id="name"  placeholder="Enter your Name" class="p-1"/>  <br> <br>
+      </div>
+
+      <div class="FormDiv">
+        <label for="">Number :</label>
+      <input type="number" id="number" placeholder="Enter your Numbaer "  class="p-1"/>  <br> <br>
+      </div>
+
+
+      <div class="FormDiv">
+        <label for="">Email :</label>
+      <input type="email" id="email" placeholder="Enter your Email" class="p-1" />  <br> <br>
+      </div>
+
+      <div class="FormDiv">
+        <label for="">Your Profile :</label>
+      <input type="url" id="image" placeholder="Enter your Profile " class="p-1"/> <br> <br>
+      </div>
+
+
+      <div class="FormDiv">
+        <label for="">Course :</label>
+      <select name="" id="course"> <br> <br>
+        <option value="" class="p-1">Select</option>
         <option value="Full-stack">Full-stack</option>
         <option value="front-end">front-end</option>
         <option value="back-end">back-end</option>
-      </select>
-      <input type="number" id="fee" />
-      <input type="submit" value="create" />
+      </select> <br> <br>
+      </div>
+
+     <div class="FormDiv">
+       <label for="">fees :</label>
+      <input type="number" id="fee"  placeholder="Enter your fees" class="p-1"/> <br> <br>
+     </div>
+
+
+      <div class="d-flex justify-content-center">
+        <div class="FormDiv">
+        <input type="submit" value="create" />
+      </div>
+      </div>
+        </div>
+      </div>
+
     </form>
 
     <!-- table create -->

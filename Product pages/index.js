@@ -1800,14 +1800,14 @@ let products= [
 
 let temp = " "
 
-for (let i = 0; i < data.length; i++)
-{
-    temp += ` <div class="col-lg-3 col-md-6 py-3">
+for (let i = 0; i < products.length; i++) {
+  temp += ` <div class="col-lg-3 col-md-6 py-3">
     <div class="box">
-        <div class="ImgDiv"><img src=${data[i].image} alt="" class="img"> </div>
-        <div class="TitleDiv"><h2 class="title">${data[i].title}</h2></div>
-       <div class="PriceDiv"> <p class="price">${data[i].price}</p></div>
-        <div class="RateDiv"><p class="rate">${data[i].rating.rate}</p></div>
+        <div class="ImgDiv"><img src=${products[i].thumbnail} alt="" class="img"> </div>
+        <div class="TitleDiv"><h2 class="title">${products[i].title}</h2></div>
+        <p>${products[i].description}</p>
+       <div class="PriceDiv"> <p class="price">${products[i].price}</p></div>
+        <div class="RateDiv"><p class="rate">${products[i].rating.rate}</p></div>
         <div class="BTNDiv"><button class="BTNbuy">Buy</button></div>
     </div>
     </div>`;
