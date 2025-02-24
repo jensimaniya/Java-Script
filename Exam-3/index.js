@@ -35,14 +35,11 @@ const TableShow = () => {
       td6.innerHTML = employes.exprience;
       
       let td7 = document.createElement("td");
-    //   td6.innerHTML = employes.expriencelevel;
-      if (exprience <= 3) {
-          
-           td6.innerHTML = employes.exprience;
-          
-          
-          
-      }
+     
+      let roleType = exprience > 5 ? "Senior" : "Junior";
+      
+       td6.innerHTML = employes.expriencelevel;
+      
 
 
     let td8 = document.createElement("td");
@@ -69,7 +66,7 @@ const submit = (e) => {
   let email = document.getElementById("email").value;
   let jobroll = document.getElementById("jobroll").value;
     let exprience = document.getElementById("exprience").value;
-    //  let expriencelevel = document.getElementById("expriencelevel").value;
+     let expriencelevel = document.getElementById("expriencelevel").value;
   let salary = document.getElementById("salary").value;
 
   let employe = {
@@ -84,7 +81,7 @@ const submit = (e) => {
   };
 
   employes.push(employe);
-  //   console.log(employes);
+ 
 
   TableShow();
 };
