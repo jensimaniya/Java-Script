@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 50px;
+}
+
+.MainFormDiv{
+    display: flex; 
+    justify-content: center; 
+    padding: 50px;
+    border: 2px solid red;
+    width: 30%;
+}
+
+
+
+#employe{
+    display: flex;
+    justify-content: center;
+}
