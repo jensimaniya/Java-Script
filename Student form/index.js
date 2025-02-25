@@ -72,3 +72,10 @@ const handlesubmit = (e) => {
 };
 
 document.getElementById("student").addEventListener("submit", handlesubmit);
+
+
+
+
+
+
+

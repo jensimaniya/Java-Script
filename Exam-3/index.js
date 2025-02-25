@@ -5,7 +5,7 @@ function allDelete() {
   employes = [];
   TableShow();
 }
-
+// one row delete krva mate
 const Delete = (i) => {
   employes.splice(i, 1);
   TableShow();
@@ -14,6 +14,7 @@ const Delete = (i) => {
 const TableShow = () => {
   document.getElementById("tablebody").innerHTML = " ";
   employes.map((employes, i) => {
+    
     let img = document.createElement("img");
     img.src = employes.image;
     let td1 = document.createElement("td");
@@ -32,15 +33,10 @@ const TableShow = () => {
     td5.innerHTML = employes.jobroll;
 
     let td6 = document.createElement("td");
-      td6.innerHTML = employes.exprience;
-      
-      let td7 = document.createElement("td");
-     
-      let roleType = exprience > 5 ? "Senior" : "Junior";
-      
-       td6.innerHTML = employes.expriencelevel;
-      
+    td6.innerHTML = employes.exprience;
 
+    let td7 = document.createElement("td");
+    td7.innerHTML = employes.expriencelevel;
 
     let td8 = document.createElement("td");
     td8.innerHTML = employes.salary;
@@ -53,7 +49,7 @@ const TableShow = () => {
     but.addEventListener("click", () => Delete(i));
 
     let tr = document.createElement("tr");
-    tr.append(td1, td2, td3, td4, td5, td6, td7, td8,td9);
+    tr.append(td1, td2, td3, td4, td5, td6, td7, td8, td9);
     document.getElementById("tablebody").append(tr);
   });
 };
@@ -65,25 +61,36 @@ const submit = (e) => {
   let number = document.getElementById("number").value;
   let email = document.getElementById("email").value;
   let jobroll = document.getElementById("jobroll").value;
-    let exprience = document.getElementById("exprience").value;
-     let expriencelevel = document.getElementById("expriencelevel").value;
+  let exprience = document.getElementById("exprience").value;
   let salary = document.getElementById("salary").value;
+
+  
+  if (exprience < 3 ) {
+    expriencelevel = `junior`;
+  } else if (exprience < 5 && exprience >= 3) {
+    expriencelevel = `mid`;
+  } else if (exprience >= 5) {
+    expriencelevel = `senior`;
+  }
+  
+  
 
   let employe = {
     name: name,
     number: number,
     email: email,
     jobroll: jobroll,
-      exprience: exprience,
-    exprienceLevel: expriencelevel,
-    salary: salary,
+    exprience: exprience,
+    expriencelevel: expriencelevel,
+    salary: salary, 
     image: image,
   };
 
   employes.push(employe);
- 
 
   TableShow();
 };
 
 document.getElementById("employe").addEventListener("submit", submit);
+
+
