@@ -10,4 +10,7 @@ console.log(students.number);
 console.log(students.course);
 console.log(students.status);
 
+console.log("--------");
+
+
 console.log(students["number"]);
