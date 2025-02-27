@@ -1,22 +1,18 @@
-
-// for first div 
+// for first div
 let count = 100;
 let value = document.getElementById("count1").innerHTML;
 console.log(value);
 setTimeout(() => {
-    let counter = setInterval(() => {
-        count++;
-        document.getElementById("count1").innerHTML = count;
-        if (count == value)
-        {
-            // count = 100;
-        }
-    },100)
-}, 2000)
-
+  let counter = setInterval(() => {
+    count++;
+    document.getElementById("count1").innerHTML = count;
+    if (count == value) {
+      // count = 100;
+    }
+  }, 100);
+}, 2000);
 
 // for second div
-
 
 let count1 = 0;
 let value1 = document.getElementById("count2").innerHTML;
@@ -30,7 +26,6 @@ setTimeout(() => {
     }
   }, 100);
 }, 2000);
-
 
 // for third div
 
@@ -47,7 +42,6 @@ setTimeout(() => {
   }, 100);
 }, 2000);
 
-
 // for forth div
 let count3 = 300;
 let value3 = document.getElementById("count4").innerHTML;
@@ -61,8 +55,3 @@ setTimeout(() => {
     }
   }, 100);
 }, 2000);
-
-
-
-
-
