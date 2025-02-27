@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.icon {
+  font-size: 100px;
+  padding: 30px;
+  color: rgb(5, 5, 77);
+  transition: transform 0.3s ease-in-out;
+}
+.icon:hover {
+  transform: scale(1.2);
+}
+.count {
+  color: rgb(5, 5, 77);
+}
+.main {
+  height: 100%vh;
+  width: 100%;
+  background-image: url(https://t3.ftcdn.net/jpg/01/38/50/68/360_F_138506867_dd9mZE3wbHlQu4UrokM6V4Ia38ivvvJO.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+ padding: 80px;
+}
+
+.MiniDiv {
+  height: 400px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(210, 241, 242);
+  border-radius: 50px;
+  border: 5px solid lightskyblue ;
+}
