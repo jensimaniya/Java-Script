@@ -9,7 +9,7 @@ setTimeout(() => {
         document.getElementById("count1").innerHTML = count;
         if (count == value)
         {
-            count = 100;
+            // count = 100;
         }
     },100)
 }, 2000)
@@ -26,7 +26,7 @@ setTimeout(() => {
     count1++;
     document.getElementById("count2").innerHTML = count1;
     if (count1 == value1) {
-      count1 = 0;
+      // count1 = 0;
     }
   }, 100);
 }, 2000);
@@ -42,7 +42,7 @@ setTimeout(() => {
     count2++;
     document.getElementById("count3").innerHTML = count2;
     if (count2 == value2) {
-      count2 = 200;
+      // count2 = 200;
     }
   }, 100);
 }, 2000);
@@ -57,7 +57,7 @@ setTimeout(() => {
     count3++;
     document.getElementById("count4").innerHTML = count3;
     if (count3 == value3) {
-      count3 = 300;
+      // count3 = 300;
     }
   }, 100);
 }, 2000);
