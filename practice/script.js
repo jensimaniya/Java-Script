@@ -10,8 +10,8 @@ setTimeout(() => {
     if (count == value) {
       count = 0;
     }
-  }, 100);
-}, 100);
+  }, 10);
+}, 10);
 
 
 
