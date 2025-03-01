@@ -32,7 +32,7 @@ console.log(Math.round(Math.random()*10000));
 
 // console.log(Math.pow(2,3));     //cube kathva mate
   
-// console.log(Math.pow(2, 2));    //queub kathva mate
+// console.log(Math.pow(2, 2));    //square kathva mate
 
 
 

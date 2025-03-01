@@ -32,7 +32,6 @@ console.log(arr5);
 // sorthing array
 let arr6 = [50, 30, 60, 20, 10];
 console.log(arr6);
-
 // arr6.sort();
 arr6.sort((a, b) => a - b);
 console.log(arr6);

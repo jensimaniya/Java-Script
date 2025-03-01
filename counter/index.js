@@ -1,7 +1,7 @@
 // for first div
 let count = 0;
 let value = document.getElementById("count1").innerHTML;
-console.log(value);
+// console.log(value);
 setTimeout(() => {
   let counter = setInterval(() => {
     count++;
@@ -16,7 +16,7 @@ setTimeout(() => {
 
 let count1 = 0;
 let value1 = document.getElementById("count2").innerHTML;
-console.log(value1);
+// console.log(value1);
 setTimeout(() => {
   let counter1 = setInterval(() => {
     count1++;
@@ -31,7 +31,7 @@ setTimeout(() => {
 
 let count2 = 0;
 let value2 = document.getElementById("count3").innerHTML;
-console.log(value2);
+// console.log(value2);
 setTimeout(() => {
   let counter = setInterval(() => {
     count2++;
@@ -45,7 +45,7 @@ setTimeout(() => {
 // for forth div
 let count3 = 0;
 let value3 = document.getElementById("count4").innerHTML;
-console.log(value3);
+// console.log(value3);
 setTimeout(() => {
   let counter = setInterval(() => {
     count3++;
