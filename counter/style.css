@@ -21,6 +21,7 @@
   width: 100%;
   background-image: url(https://t3.ftcdn.net/jpg/01/38/50/68/360_F_138506867_dd9mZE3wbHlQu4UrokM6V4Ia38ivvvJO.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
  padding: 80px;
 }
