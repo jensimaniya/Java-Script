@@ -1,20 +1,24 @@
 let count = 0;
 let value;
+let counterDisplay = document.getElementById("count1");
 
+const start = () => {
+  if (!value) {
+    value = setInterval(() => {
+      count++;
+      counterDisplay.textContent = count;
+    }, 1000);
+  }
+};
 
-let start = document.getElementById("start");
-// let stop = document.getElementById("stop");
-// let reset = document.getElementById("reset");
+const stop = () => {
+  clearInterval(value);
+  value = null;
+};
 
-setTimeout(() => {
-  let counter = setInterval(() => {
-    count++;
-    document.getElementById("start").innerHTML=count;
-    
-  },1000)
-  
-},1000)
-
-
-
-
+const reset = () => {
+  clearInterval(value);
+  value = null;
+  count = 0;
+  counterDisplay.textContent = count;
+};
