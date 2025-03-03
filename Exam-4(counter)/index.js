@@ -1,31 +1,29 @@
 let count = 0;
-let value;
+let interval;
 
-let counterDisplay = document.getElementById("counter");
-let start = document.getElementById("start");
-let stop = document.getElementById("stop");
-let reset = document.getElementById("reset");
+const counterDisplay = document.getElementById("counter");
 
-// Start 
-start.addEventListener("click", () => {
-  if (!value) {
-    value = setInterval(() => {
+const startfunction = () => {
+  if (!interval) {
+    interval = setInterval(() => {
       count++;
       counterDisplay.textContent = count;
-    }, 100);
+    }, 1000);
   }
-});
+};
 
-// Stop 
-stop.addEventListener("click", () => {
-  clearInterval(value);
-  value = 0;
-});
+const stopfunction = () => {
+  clearInterval(interval);
+  interval = null;
+};
 
-// Reset 
-reset.addEventListener("click", () => {
-  clearInterval(value);
-  value = 0;
+const restefunction = () => {
+  clearInterval(interval); // Stop counting on reset
+  interval = null;
   count = 0;
   counterDisplay.textContent = count;
-});
+};
+
+document.getElementById("start").addEventListener("click", startfunction);
+document.getElementById("stop").addEventListener("click", stopfunction);
+document.getElementById("reset").addEventListener("click", restefunction);
