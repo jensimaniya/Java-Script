@@ -5,19 +5,19 @@ const start = () => {
   if (!value) {
     value = setInterval(() => {
       count++;
-      document.getElementById("count1").innerHTML=count
+      document.getElementById("count1").innerHTML = count;
     }, 1000);
   }
 };
 
 const stop = () => {
   clearInterval(value);
-  value = null;
+  value = 0;
 };
 
 const reset = () => {
   clearInterval(value);
-  value = null;
+  value = 0;
   count = 0;
    document.getElementById("count1").innerHTML = count;
 };
