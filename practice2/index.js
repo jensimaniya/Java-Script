@@ -1,12 +1,11 @@
 let count = 0;
 let value;
-let counterDisplay = document.getElementById("count1");
 
 const start = () => {
   if (!value) {
     value = setInterval(() => {
       count++;
-      counterDisplay.textContent = count;
+      document.getElementById("count1").innerHTML=count
     }, 1000);
   }
 };
@@ -20,5 +19,5 @@ const reset = () => {
   clearInterval(value);
   value = null;
   count = 0;
-  counterDisplay.textContent = count;
+   document.getElementById("count1").innerHTML = count;
 };
