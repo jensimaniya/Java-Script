@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+ 
+  
+
+}
+button {
+  height: 50px;
+  width: 120px;
+  border: none;
+  font-size: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+button:hover{
+    border: 2px solid red;
+}
+h1{
+    padding: 20px;
+    font-size: 50px;
+}

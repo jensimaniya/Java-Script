@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="mainDiv">
+      <h1>Counter</h1>
 
-    <h1 id="count1">0</h1>
+      <h1 id="count1">0</h1>
 
-    <button onclick="start()" >start</button>
-    <button onclick="stop()" >end</button>
-    <button onclick="reset()" >Reset</button>
-    
-</body>
-<script src="./index.js"></script>
+      <div>
+        <button onclick="start()">start</button>
+      <button onclick="stop()">end</button>
+      <button onclick="reset()">Reset</button>
+      </div>
+    </div>
+
+  </body>
+  <script src="./index.js"></script>
 </html>

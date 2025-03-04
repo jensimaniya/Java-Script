@@ -6,7 +6,7 @@ const start = () => {
     value = setInterval(() => {
       count++;
       document.getElementById("count1").innerHTML = count;
-    }, 1000);
+    }, 100);
   }
 };
 
