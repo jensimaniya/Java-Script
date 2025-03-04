@@ -21,3 +21,4 @@ let std = new Student("jensi", 9879388, 8718, "full stack");
 
 std.setName("nidhi"); // Pass the new name as an argument
 std.getName(); // Now it will print "nidhi"
+ 
