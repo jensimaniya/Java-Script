@@ -9,16 +9,19 @@ img {
 }
 .form {
   width: 400px;
-  border: 2px solid black;
+  border: 2px solid palevioletred;
   margin-left: 35%;
   padding: 20px;
   margin-bottom: 20px;
+  height: 450px;
+  background-color: rgb(252, 249, 249);
 }
 
 .FormDiv {
   /* display: flex; */
   align-items: center;
-  /* height: 80px; */
+  height: 65px;
+  
 }
 
 .MainDiv {
@@ -35,4 +38,15 @@ img {
 .head {
   text-align: center;
   color: palevioletred;
+}
+.Btn{
+    width: 300px;
+    height: 50px;
+    border: none;
+    font-size: 20px;
+    background-color: palevioletred;
+
+}
+.Btn:hover{
+    border: 2px solid black;
 }

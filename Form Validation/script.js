@@ -29,11 +29,6 @@ const uiMaker = () => {
     let td3 = document.createElement("td");
     td3.innerHTML = student1.email;
 
-    let img = document.createElement("img");
-    img.src = student1.image;
-    let td4 = document.createElement("td");
-    td4.append(img);
-
     let td5 = document.createElement("td");
     td5.innerHTML = student1.course;
 
@@ -48,7 +43,7 @@ const uiMaker = () => {
     but.addEventListener("click", () => handleDelete(i));
 
     let tr = document.createElement("tr");
-    tr.append(td1, td2, td3, td4, td5, td6, td7);
+    tr.append(td1, td2, td3, td5, td6, td7);
     document.getElementById("tablebody").append(tr);
   });
 };
@@ -58,7 +53,6 @@ const handlesubmit = (e) => {
   let name = document.getElementById("name").value;
   let number = document.getElementById("number").value;
   let email = document.getElementById("email").value;
-  let image = document.getElementById("image").value;
   let course = document.getElementById("course").value;
   let fee = document.getElementById("fee").value;
 
@@ -77,16 +71,6 @@ const handlesubmit = (e) => {
     return;
   }
 
-  if (image.length == 0) {
-    errorDetails("img-box", "please enter your image");
-    return;
-  }
-
-  // if (course.length < 2) {
-  //   errorDetails("course-box", "please enter valid course name");
-  //   return;
-  // }
-
   if (fee.length < 2) {
     errorDetails("fees-box", "please enter valid fees");
     return;
@@ -96,13 +80,11 @@ const handlesubmit = (e) => {
     name: name,
     number: number,
     email: email,
-    image: image,
     course: course,
     fee: fee,
   };
 
   students.push(student);
-  // console.log(students);
 
   uiMaker();
 };
