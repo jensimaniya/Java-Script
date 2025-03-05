@@ -1,10 +1,14 @@
+// blank array craet kro
 let students = [];
 
+
+// form validation function start
 const errorDetails = (id, msg) => {
   let error = document.createElement("p");
   error.innerHTML = msg;
   document.getElementById(id).append(error);
 };
+// form validation function end
 
 // delete all data mate
 function allDelete() {
@@ -17,6 +21,8 @@ const handleDelete = (i) => {
   uiMaker();
 };
 
+
+// table ni td or tr creat krva mate
 const uiMaker = () => {
   document.getElementById("tablebody").innerHTML = " ";
   students.map((student1, i) => {
@@ -48,6 +54,7 @@ const uiMaker = () => {
   });
 };
 
+// user pase thi value leva matenu function
 const handlesubmit = (e) => {
   e.preventDefault();
   let name = document.getElementById("name").value;
@@ -55,6 +62,16 @@ const handlesubmit = (e) => {
   let email = document.getElementById("email").value;
   let course = document.getElementById("course").value;
   let fee = document.getElementById("fee").value;
+// object bnavyo
+  let student = {
+    name: name,
+    number: number,
+    email: email,
+    course: course,
+    fee: fee,
+    };
+    
+    // for form validation start
 
   if (name.length < 2) {
     errorDetails("name-box", "please enter valid name");
@@ -74,16 +91,11 @@ const handlesubmit = (e) => {
   if (fee.length < 2) {
     errorDetails("fees-box", "please enter valid fees");
     return;
-  }
+    }
+    // form validation end
 
-  let student = {
-    name: name,
-    number: number,
-    email: email,
-    course: course,
-    fee: fee,
-  };
 
+// object array ma add karva mate
   students.push(student);
 
   uiMaker();
