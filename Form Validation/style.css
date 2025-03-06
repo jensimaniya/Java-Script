@@ -18,7 +18,7 @@ img {
 }
 
 .FormDiv {
-  height: 65px; 
+  height: 65px;
 }
 
 .MainDiv {
@@ -28,19 +28,17 @@ img {
   margin-left: 15%;
 }
 
-
 .head {
   text-align: center;
   color: palevioletred;
 }
-.Btn{
-    width: 300px;
-    height: 50px;
-    border: none;
-    font-size: 20px;
-    background-color: palevioletred;
-
+.Btn {
+  width: 300px;
+  height: 50px;
+  border: none;
+  font-size: 20px;
+  background-color: palevioletred;
 }
-.Btn:hover{
-    border: 2px solid black;
+.Btn:hover {
+  border: 2px solid black;
 }
