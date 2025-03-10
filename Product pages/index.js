@@ -1,4 +1,5 @@
-let products= [
+let products =
+  [
     {
       "id": 1,
       "title": "Essence Mascara Lash Princess",
@@ -1807,7 +1808,10 @@ for (let i = 0; i < products.length; i++) {
         <div class="TitleDiv"><h2 class="title">${products[i].title}</h2></div>
         <p>${products[i].description}</p>
        <div class="PriceDiv"> <p class="price">${products[i].price}</p></div>
-        <div class="RateDiv"><p class="rate">${products[i].rating.rate}</p></div>
+        <div class="RateDiv"><p class="rate">${products[i].rating}</p></div>
+        <p class="rate">${products[i].dimensions.width}</p>
+        <p class="rate">${products[i].tags[1]}</p>
+
         <div class="BTNDiv"><button class="BTNbuy">Buy</button></div>
     </div>
     </div>`;

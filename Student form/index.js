@@ -66,8 +66,7 @@ const handlesubmit = (e) => {
   };
 
   students.push(student);
-  // console.log(students);
-
+  
   uiMaker();
 };
 
