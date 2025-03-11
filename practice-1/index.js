@@ -33,9 +33,18 @@ document.querySelector("#name").addEventListener("input", (e) => {
   }
 });
 
-document.querySelector("#number").setAttribute("input", (e) => {
+
+const uiMaker = () => {
+  students.map((student1, i) => {
+    let td1 = document.createElement("td")
+    td1.innerHTML=student1.name;
+
+  });
+};
+
+document.querySelector("#number").addEventListener("input", (e) => {
   let number = e.target.value;
-  let numberRezex = "^[0-9]+$";
+  let numberRezex = /^[0-5]+$/;
 
   if (numberRezex.test(number)) {
     document.getElementById("number").setAttribute("class", "passed");
@@ -43,5 +52,8 @@ document.querySelector("#number").setAttribute("input", (e) => {
     document.getElementById("number").setAttribute("class", "err");
   }
 });
+
+
+
 
 document.getElementById("student").addEventListener("submit", handlesubmit);
