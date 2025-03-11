@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.passed{
+    outline: 2px solid greenyellow;
+}
+
+.err{
+    outline: 2px solid red;
+    border: 2px solid red;
+}

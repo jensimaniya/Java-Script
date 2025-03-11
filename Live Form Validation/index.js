@@ -41,3 +41,6 @@ document.querySelector("#password").addEventListener("input", (e) => {
     validation("password", "err");
   }
 });
+
+
+
