@@ -3,6 +3,10 @@ let students = [];
 const GetValue = (id) => {
   return document.getElementById(id).value;
 };
+const handleDelete = (i) => {
+  students.splice(i, 1);
+  uiMaker();
+};
 
 const handlesubmit = (e) => {
   e.preventDefault();
@@ -16,6 +20,7 @@ const handlesubmit = (e) => {
     email: email,
   };
   students.push(student);
+  uiMaker();
 
   console.log(name, number, email);
 };
@@ -35,9 +40,27 @@ document.querySelector("#name").addEventListener("input", (e) => {
 
 
 const uiMaker = () => {
+  document.getElementById("tablebody").innerHTML = " ";
   students.map((student1, i) => {
-    let td1 = document.createElement("td")
-    td1.innerHTML=student1.name;
+   let td1 = document.createElement("td");
+   td1.innerHTML = student1.name;
+
+   let td2 = document.createElement("td");
+   td2.innerHTML = student1.number;
+
+   let td3 = document.createElement("td");
+    td3.innerHTML = student1.email;
+
+    let but = document.createElement("button");
+    but.innerHTML = "button";
+    let td7 = document.createElement("td");
+    td7.append(but);
+    
+     but.addEventListener("click", () => handleDelete(i));
+    
+    let tr = document.createElement("tr");
+    tr.append(td1, td2, td3,td7);
+    document.getElementById("tablebody").append(tr);
 
   });
 };

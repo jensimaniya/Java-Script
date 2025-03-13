@@ -4,14 +4,12 @@ let value = document.getElementById("count1").innerHTML;
 
 setTimeout(() => {
   let counter = setInterval(() => {
-    count++;
     document.getElementById("count1").innerHTML = count;
+    count++;
 
     if (count == value) {
       count = 0;
     }
-  }, 10);
+  }, 100);
 }, 10);
-
-
 

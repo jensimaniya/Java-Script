@@ -12,7 +12,7 @@ const start = () => {
 
 const stop = () => {
   clearInterval(value);
-  value = 0;
+  // value = 0;
 };
 
 const reset = () => {
