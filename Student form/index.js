@@ -66,15 +66,8 @@ const handlesubmit = (e) => {
   };
 
   students.push(student);
-  
+
   uiMaker();
 };
 
 document.getElementById("student").addEventListener("submit", handlesubmit);
-
-
-
-
-
-
-

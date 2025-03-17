@@ -4,12 +4,12 @@ let interval;
 
 
 const startfunction = () => {
-  if (!interval) {
+  // if (!interval) {
     interval = setInterval(() => {
       count++;
       document.getElementById("counter").innerHTML=count;
     }, 1000);
-  }
+  // }d
 };
 
 const stopfunction = () => {

@@ -9,7 +9,7 @@ function sum() {
 function sub() {
   let a = document.getElementById("valueOfA").value;
   let b = document.getElementById("valueOfB").value;
-  document.getElementById("result").innerHTML = Number(a) - Number(b);
+  document.getElementById("result").innerHTML = a - b;
 }
 
 function mul() {

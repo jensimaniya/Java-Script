@@ -1,4 +1,4 @@
-function BillMethod() {
+ function BillMethod() {
   let units = document.getElementById("AnyNumber").value;
 
   let bill = 0;

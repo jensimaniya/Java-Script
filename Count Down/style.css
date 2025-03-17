@@ -1,4 +1,4 @@
-/* General page styling
+
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
@@ -7,20 +7,20 @@ body {
     min-height: 100vh;
     background-color: #f4f4f4;
     margin: 0;
-} */
+} 
 
-/* Container styling */
-/* div {
+ Container styling 
+ div {
     background-color: #fff;
     border-radius: 8px;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 250px;
-} */
+} 
 
-/* Input field styling */
-/* input[type="number"] {
+
+ input[type="number"] {
     width: 80%;
     padding: 10px;
     margin: 10px 0;
@@ -29,15 +29,15 @@ body {
     border-radius: 4px;
     outline: none;
     transition: border-color 0.3s;
-} */
+} 
 
-/* Input focus effect */
-/* input[type="number"]:focus {
+ Input focus effect 
+ input[type="number"]:focus {
     border-color: #6c5ce7;
-} */
+} 
 
-/* Button styling */
-/* button {
+ Button styling 
+ button {
     padding: 10px 20px;
     background-color: #6c5ce7;
     color: white;
@@ -46,28 +46,28 @@ body {
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s;
-} */
+} 
 
-/* Button hover effect */
-/* button:hover {
+ Button hover effect 
+ button:hover {
     background-color: #5a4ecb;
-} */
+} 
 
-/* Heading styling */
-/* h1 {
+ Heading styling 
+ h1 {
     font-size: 24px;
     color: #333;
     margin-top: 20px;
     font-weight: 600;
     transition: color 0.3s ease;
-} */
+} 
 
-/* Message when invalid number is entered */
-/* h1.error {
+ 
+ h1.error {
     color: red;
-} */
+} 
 
-/* Message when a valid number is entered */
-/* h1.success {
+
+ h1.success {
     color: green;
-} */
+} 

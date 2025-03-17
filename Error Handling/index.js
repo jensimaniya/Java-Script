@@ -7,10 +7,10 @@ const divide = (a, b) => {
 };
 console.log("before divide");
 try {
-  console.log(divide(10, 2));
+  console.log(divide(10, 0));
   let i = 0;
   // finally ni process bandh karva mate
-  while (i < 10) {}
+  // while (i < 10) {}
 } catch (err) {
   console.log(err.message);
 } finally {
