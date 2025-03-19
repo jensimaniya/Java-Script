@@ -7,9 +7,24 @@
 
 img{
     height: 50px;
+    margin: auto;
+    margin-top: 30px;
 }
 
 #productlist{
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    
+}
+#product{
+    margin: 30px;
+}
+
+.product{
+
+margin: 40px;
+}
+
+.btnSort{
+    margin: 30px;
 }

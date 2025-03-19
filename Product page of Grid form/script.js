@@ -1,9 +1,8 @@
-let products = [];
+let products = JSON.parse(localStorage.getItem("products")) || [];
 
-const uiMaker = () => {
-    document.getElementById("productlist").innerHTML = "";
-    products.map((Item, i) => {
-      
+const uiMaker = (products) => {
+  document.getElementById("productlist").innerHTML = "";
+  products.map((Item, i) => {
     let image = document.createElement("img");
     image.src = Item.image;
 
@@ -17,15 +16,18 @@ const uiMaker = () => {
     category.innerHTML = Item.category;
 
     let btndlt = document.createElement("button");
-      btndlt.innerHTML = Item.btndlt;
-      
-      btndlt.addEventListener("click", () => {
-          products.splice(i, 1);
-          uiMaker();
-      })
+    btndlt.innerHTML = "Delete";
+    let p = document.createElement("p");
+    p.append(btndlt);
+
+    btndlt.addEventListener("click", () => {
+      products.splice(i, 1);
+      uiMaker();
+      let product = JSON.parse(localStorage.getItem("products")) || [];
+    });
 
     let div = document.createElement("div");
-    div.append(image, title, price, category, btndlt);
+    div.append(image, title, price, category, p);
 
     document.getElementById("productlist").append(div);
   });
@@ -35,7 +37,7 @@ const getValue = (id) => {
   return document.getElementById(id).value;
 };
 
-let product = JSON.parse(localStorage.getItem("products")) || [];
+uiMaker(products);
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -48,10 +50,27 @@ const handleSubmit = (e) => {
   };
 
   products.push(product);
-    // console.log(products);
-    localStorage.setItem("products", JSON.stringify(product));
 
-  uiMaker();
+  localStorage.setItem("products", JSON.stringify(products));
+
+  uiMaker(products);
 };
 
 document.getElementById("product").addEventListener("submit", handleSubmit);
+
+// for sorting
+const handleSort = (orderby) => {
+  if (orderby == "lth") {
+    let temp = products.sort((a, b) => a.price - b.price);
+    uiMaker(temp);
+  } else {
+    let temp = products.sort((a, b) => b.price - a.price);
+    uiMaker(temp);
+  }
+};
+document
+  .getElementById("htl")
+  .addEventListener("click", () => handleSort("htl"));
+document
+  .getElementById("lth")
+  .addEventListener("click", () => handleSort("lth"));
