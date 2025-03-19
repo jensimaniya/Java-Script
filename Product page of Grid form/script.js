@@ -20,6 +20,7 @@ const uiMaker = (products) => {
     let p = document.createElement("p");
     p.append(btndlt);
 
+
     btndlt.addEventListener("click", () => {
       products.splice(i, 1);
       uiMaker();
@@ -74,3 +75,34 @@ document
 document
   .getElementById("lth")
   .addEventListener("click", () => handleSort("lth"));
+
+
+// category filter
+  
+const FilterByCategory = (category) => {
+  if (category == "all") {
+    uiMaker(products);
+    return;
+  }
+
+  let temp = products.filter((ele) => ele.category == category);
+  uiMaker(temp);
+  
+};
+
+document.getElementById("kids").addEventListener("click", () => FilterByCategory("kids"))
+
+document
+  .getElementById("women")
+  .addEventListener("click", () => FilterByCategory("women"));
+
+  document
+    .getElementById("men")
+    .addEventListener("click", () => FilterByCategory("men"));
+
+
+
+  
+
+
+
