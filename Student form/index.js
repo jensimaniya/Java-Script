@@ -1,4 +1,5 @@
-let students = [];
+// let students = [];
+let students = JSON.parse(localStorage.getItem("students")) || [];
 
 // delete all data mate
 function allDelete() {
@@ -8,6 +9,7 @@ function allDelete() {
 
 const handleDelete = (i) => {
   students.splice(i, 1);
+  localStorage.setItem("students", JSON.stringify(students));
   uiMaker();
 };
 
@@ -35,11 +37,12 @@ const uiMaker = () => {
     td6.innerHTML = student1.fee;
 
     let but = document.createElement("button");
-    but.innerHTML = "button";
+    but.innerHTML = "Delete";
     let td7 = document.createElement("td");
     td7.append(but);
 
     but.addEventListener("click", () => handleDelete(i));
+    
 
     let tr = document.createElement("tr");
     tr.append(td1, td2, td3, td4, td5, td6, td7);
@@ -66,6 +69,7 @@ const handlesubmit = (e) => {
   };
 
   students.push(student);
+  localStorage.setItem("students", JSON.stringify(students));
 
   uiMaker();
 };
