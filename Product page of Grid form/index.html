@@ -9,9 +9,9 @@
   </head>
   <body>
     <form id="product">
-      <input type="text" id="title" placeholder="title" />
-      <input type="number" id="price" placeholder="price" />
-      <input type="src" id="image" placeholder="images" />
+      <input type="text" id="title" placeholder="title" /> <br> 
+      <input type="number" id="price" placeholder="price" /> <br> 
+      <input type="src" id="image" placeholder="images" /> <br> 
 
       <select id="category">
         <option value="">select</option>
@@ -20,19 +20,34 @@
         <option value="men">Men</option>
       </select>
 
-      <input type="submit" value="create" />
+      <br>
+
+      <input type="submit" value="create" id="CreateBTN" />
+
+      <br />
+      <br />
+
+      
     </form>
 
-    <hr />
-    <button id="lth" class="btnSort">Low To High</button>
+   
+    <div class="MainBtn">
+      <button id="lth">Low To High</button>
     <button id="htl">High To Low</button>
 
     <button id="kids">Kids</button>
     <button id="women">Women</button>
     <button id="men">Men</button>
     <button id="all">All</button>
+    </div>
 
-    <div id="productlist" class="product"></div>
+     <hr />
+
+<div class="SearchDiv">
+  <input type="search" placeholder="Search" id="search" />
+</div>
+
+    <div id="productlist" ></div>
   </body>
   <!-- java script file attechment -->
   <script src="./script.js"></script>

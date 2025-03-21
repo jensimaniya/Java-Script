@@ -1,4 +1,7 @@
+// create an Array for data storing
 let products = JSON.parse(localStorage.getItem("products")) || [];
+// create an array for Like button
+let Like = JSON.parse(localStorage.getItem("Like")) || [];
 
 const uiMaker = (products) => {
   document.getElementById("productlist").innerHTML = "";
@@ -10,11 +13,12 @@ const uiMaker = (products) => {
     title.innerHTML = Item.title;
 
     let price = document.createElement("p");
-    price.innerHTML = Item.price;
+    price.innerHTML = `Rs. ${Item.price}`;
 
     let category = document.createElement("p");
     category.innerHTML = Item.category;
 
+    // create delete button
     let btndlt = document.createElement("button");
     btndlt.innerHTML = "Delete";
     let p = document.createElement("p");
@@ -23,23 +27,34 @@ const uiMaker = (products) => {
     btndlt.addEventListener("click", () => {
       products.splice(i, 1);
       uiMaker(products);
-  localStorage.setItem("products", JSON.stringify(products));
-
-    
+      localStorage.setItem("products", JSON.stringify(products));
     });
 
+    
+
+    //create  LikeButtons 
+    let LikeButtons = document.createElement("button");
+    LikeButtons.innerHTML = "Like";
+    LikeButtons.style.height = "80px ";
+    LikeButtons.addEventListener("click", () => {
+      Like.push(Item); 
+      localStorage.setItem("Like", JSON.stringify(Like));
+    });
+
+    // create a div
     let div = document.createElement("div");
-    div.append(image, title, price, category, p);
+    div.append(image, title, price, category, p, LikeButtons);
 
     document.getElementById("productlist").append(div);
   });
 };
 
+uiMaker(products);
+
+// Fome ma value input matenu function
 const getValue = (id) => {
   return document.getElementById(id).value;
 };
-
-uiMaker(products);
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -49,8 +64,10 @@ const handleSubmit = (e) => {
     price: getValue("price"),
     image: getValue("image"),
     category: getValue("category"),
+    id: Date.now(),
   };
 
+  // object array ma push kravyo
   products.push(product);
 
   localStorage.setItem("products", JSON.stringify(products));
@@ -104,3 +121,14 @@ document
 document
   .getElementById("all")
   .addEventListener("click", () => FilterByCategory("all"));
+
+// serching
+const Serching = (value) => {
+  let temp = products.filter((ele) => ele.title.toLowerCase().includes(value.toLowerCase()));
+  uiMaker(temp);
+};
+
+document.getElementById("search").addEventListener("input", () => {
+  let value = getValue("search");
+  Serching(value);
+});
