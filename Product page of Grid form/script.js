@@ -22,6 +22,7 @@ const uiMaker = (products) => {
     // create delete button
     let btndlt = document.createElement("button");
     btndlt.innerHTML = "Delete";
+    btndlt.style.width = "50px";
     let p = document.createElement("p");
     p.append(btndlt);
 
@@ -34,8 +35,7 @@ const uiMaker = (products) => {
     //create  LikeButtons
     let LikeButtons = document.createElement("button");
     LikeButtons.innerHTML = "Like";
-    // LikeButtons.style.height = "80px ";
-    // LikeButtons.style.width = "80px";
+    LikeButtons.style.width = "60px";
 
     // Find by Id
     const IsExists = (id) => {

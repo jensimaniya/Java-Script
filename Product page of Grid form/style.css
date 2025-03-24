@@ -75,7 +75,7 @@ img {
   border-radius: 8px;
 }
 #product input[type="submit"]:hover {
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .MainBtn {
@@ -91,6 +91,9 @@ img {
   border-radius: 5px;
   background-color: #adb2d4;
 }
+#lth:hover {
+  border: 2px solid darkblue;
+}
 
 #htl {
   height: 40px;
@@ -98,6 +101,9 @@ img {
   border: none;
   border-radius: 5px;
   background-color: #adb2d4;
+}
+#htl:hover {
+  border: 2px solid darkblue;
 }
 
 #kids {
@@ -107,6 +113,9 @@ img {
   border-radius: 5px;
   background-color: #adb2d4;
 }
+#kids:hover {
+  border: 2px solid darkblue;
+}
 
 #women {
   height: 40px;
@@ -115,12 +124,18 @@ img {
   border-radius: 5px;
   background-color: #adb2d4;
 }
+#women:hover {
+  border: 2px solid darkblue;
+}
 #men {
   height: 40px;
   width: 60px;
   border: none;
   border-radius: 5px;
   background-color: #adb2d4;
+}
+#men:hover {
+  border: 2px solid darkblue;
 }
 
 #all {
@@ -129,6 +144,9 @@ img {
   border: none;
   border-radius: 5px;
   background-color: #adb2d4;
+}
+#all:hover {
+  border: 2px solid darkblue;
 }
 #search {
   height: 35px;
@@ -142,8 +160,25 @@ img {
   margin-top: 20px;
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+#like div {
+  height: 300px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  background-color: lightgrey;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgb(58, 56, 56);
+}
+#like {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 30px;
+}
 
+@media (min-width: 320px) and (max-width: 768px) {
   .MainBtn {
     flex-direction: column;
     gap: 20px;
@@ -153,19 +188,29 @@ img {
     padding: 0px;
   }
   #productlist {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
-#productlist div {
-  
-  height: 350px;
-  width: 280px; 
-   margin-left: 0px;
-}
-body {
-  margin: 0px;
-}
+  #productlist div {
+    height: 350px;
+    width: 280px;
+    margin-left: 0px;
+  }
+  body {
+    margin: 0px;
+  }
+  #like div {
+    height: 300px;
+    width: 250px;
+    margin: auto;
+    gap: 10px;
+  }
+  #like {
+    grid-template-columns: repeat(1, 1fr);
+    /* padding: 30px; */
+    gap: 25px;
+  }
 }
