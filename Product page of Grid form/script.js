@@ -1,7 +1,8 @@
 // create an Array for data storing
 let products = JSON.parse(localStorage.getItem("products")) || [];
+
 // create an array for Like button
-let Like = JSON.parse(localStorage.getItem("Like")) || [];
+let Like = JSON.parse(localStorage.getItem("Likes")) || [];
 
 const uiMaker = (products) => {
   document.getElementById("productlist").innerHTML = "";
@@ -30,15 +31,30 @@ const uiMaker = (products) => {
       localStorage.setItem("products", JSON.stringify(products));
     });
 
-    
-
-    //create  LikeButtons 
+    //create  LikeButtons
     let LikeButtons = document.createElement("button");
     LikeButtons.innerHTML = "Like";
-    LikeButtons.style.height = "80px ";
+    // LikeButtons.style.height = "80px ";
+    // LikeButtons.style.width = "80px";
+
+    // Find by Id
+    const IsExists = (id) => {
+      for (let i = 0; i < Like.length; i++) {
+        if (Like[i].id == id) {
+          return true;
+        }
+      }
+      return false;
+    };
+
     LikeButtons.addEventListener("click", () => {
-      Like.push(Item); 
-      localStorage.setItem("Like", JSON.stringify(Like));
+      if (IsExists(Item.id)) {
+        alert("alery Exists this Product");
+      } else {
+        Like.push(Item);
+        localStorage.setItem("Likes", JSON.stringify(Like));
+        alert("Your Product is Added");
+      }
     });
 
     // create a div
@@ -95,7 +111,6 @@ document
   .addEventListener("click", () => handleSort("lth"));
 
 // category filter
-
 const FilterByCategory = (category) => {
   if (category == "all") {
     uiMaker(products);
@@ -124,7 +139,9 @@ document
 
 // serching
 const Serching = (value) => {
-  let temp = products.filter((ele) => ele.title.toLowerCase().includes(value.toLowerCase()));
+  let temp = products.filter((ele) =>
+    ele.title.toLowerCase().includes(value.toLowerCase())
+  );
   uiMaker(temp);
 };
 

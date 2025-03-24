@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>product Page Of Grid Form</title>
     <!-- css file attechment -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <a href="./likes.html">likepage</a>
     <form id="product">
-      <input type="text" id="title" placeholder="title" /> <br> 
-      <input type="number" id="price" placeholder="price" /> <br> 
-      <input type="src" id="image" placeholder="images" /> <br> 
+      <input type="text" id="title" placeholder="title" /> <br />
+      <input type="number" id="price" placeholder="price" /> <br />
+      <input type="src" id="image" placeholder="images" /> <br />
 
       <select id="category">
         <option value="">select</option>
@@ -20,34 +21,31 @@
         <option value="men">Men</option>
       </select>
 
-      <br>
+      <br />
 
       <input type="submit" value="create" id="CreateBTN" />
 
       <br />
       <br />
-
-      
     </form>
 
-   
     <div class="MainBtn">
       <button id="lth">Low To High</button>
-    <button id="htl">High To Low</button>
+      <button id="htl">High To Low</button>
 
-    <button id="kids">Kids</button>
-    <button id="women">Women</button>
-    <button id="men">Men</button>
-    <button id="all">All</button>
+      <button id="kids">Kids</button>
+      <button id="women">Women</button>
+      <button id="men">Men</button>
+      <button id="all">All</button>
     </div>
 
-     <hr />
+    <hr />
 
-<div class="SearchDiv">
-  <input type="search" placeholder="Search" id="search" />
-</div>
+    <div class="SearchDiv">
+      <input type="search" placeholder="Search" id="search" />
+    </div>
 
-    <div id="productlist" ></div>
+    <div id="productlist"></div>
   </body>
   <!-- java script file attechment -->
   <script src="./script.js"></script>

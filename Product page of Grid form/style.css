@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-body{
+body {
   margin: 50px;
 }
 
@@ -15,7 +15,6 @@ img {
 #productlist {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* padding: 30px; */
 }
 
 #productlist div {
@@ -42,120 +41,131 @@ img {
   align-items: center;
   margin: auto;
   padding: 20px;
-  /* background-color: pink; */
-  
 }
 
-#title{
+#title {
   width: 180px;
   margin: auto;
   padding: 4px;
-  
 }
-#price{
+#price {
   width: 180px;
   margin: auto;
-   padding: 4px;
-
+  padding: 4px;
 }
 
-#image{
+#image {
   width: 180px;
   margin: auto;
-   padding: 4px;
-
+  padding: 4px;
 }
 
-#category{
+#category {
   width: 180px;
   margin: auto;
-   padding: 4px;
-
+  padding: 4px;
 }
-
-
 
 #product input[type="submit"] {
-  
   border: none;
   background-color: palevioletred;
   width: 180px;
   margin: auto;
   height: 300px;
   border-radius: 8px;
- 
 }
-#product input[type="submit"]:hover{
+#product input[type="submit"]:hover {
   border: 1px solid black;
 }
 
-.MainBtn{
+.MainBtn {
   margin: 40px;
   display: flex;
   justify-content: space-evenly;
 }
 
-#lth{
+#lth {
   height: 40px;
   width: 100px;
   border: none;
   border-radius: 5px;
-  background-color:#ADB2D4;
+  background-color: #adb2d4;
 }
 
-#htl{
+#htl {
   height: 40px;
   width: 100px;
-   border: none;
+  border: none;
   border-radius: 5px;
-  background-color:#ADB2D4;
-
+  background-color: #adb2d4;
 }
 
-#kids{
+#kids {
   height: 40px;
   width: 80px;
-   border: none;
+  border: none;
   border-radius: 5px;
-  background-color:#ADB2D4;
+  background-color: #adb2d4;
 }
 
-#women{
+#women {
   height: 40px;
   width: 80px;
-   border: none;
+  border: none;
   border-radius: 5px;
-  background-color:#ADB2D4;
-
+  background-color: #adb2d4;
 }
-#men{
+#men {
   height: 40px;
   width: 60px;
-   border: none;
+  border: none;
   border-radius: 5px;
-  background-color:#ADB2D4;
-
+  background-color: #adb2d4;
 }
 
-#all{
+#all {
   height: 40px;
   width: 60px;
-   border: none;
+  border: none;
   border-radius: 5px;
-  background-color:#ADB2D4;
-
+  background-color: #adb2d4;
 }
-#search{
+#search {
   height: 35px;
   width: 200px;
   padding: 10px;
- 
 }
-.SearchDiv{
+.SearchDiv {
   display: flex;
- justify-content: center;
- align-items: center;
-
- margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
+@media (min-width: 320px) and (max-width: 768px) {
+
+  .MainBtn {
+    flex-direction: column;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+  #productlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#productlist div {
+  
+  height: 350px;
+  width: 280px; 
+   margin-left: 0px;
+}
+body {
+  margin: 0px;
+}
+}
