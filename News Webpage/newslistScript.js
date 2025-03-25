@@ -1,8 +1,8 @@
-let BreakingNews = JSON.parse(localStorage.getItem("BreakingNews")) || [];
+let HomePageShow = JSON.parse(localStorage.getItem("HomePageShow")) || [];
 
-const Uimaker = (BreakingNews) => {
+const Uimaker = (HomePageShow) => {
   document.getElementById("newsList").innerHTML = " ";
-  BreakingNews.map((ele, i) => {
+  HomePageShow.map((ele, i) => {
     let title = document.createElement("h1");
     title.innerHTML = ele.title;
 
@@ -19,9 +19,9 @@ const Uimaker = (BreakingNews) => {
     let btn = document.createElement("button");
     btn.innerHTML = "Delete";
     btn.addEventListener("click", () => {
-      BreakingNews.splice(i, 1);
-      localStorage.setItem("BreakingNews", JSON.stringify(BreakingNews));
-      Uimaker(BreakingNews);
+      HomePageShow.splice(i, 1);
+      localStorage.setItem("HomePageShow", JSON.stringify(HomePageShow));
+      Uimaker(HomePageShow);
     });
 
     // create a div
@@ -31,4 +31,63 @@ const Uimaker = (BreakingNews) => {
   });
 };
 
-Uimaker(BreakingNews);
+Uimaker(HomePageShow);
+
+
+// serching
+
+const getValue = (id) => {
+  return document.getElementById(id).value;
+};
+// const handleSubmit = (e) => {
+//   e.preventDefault();
+//   let New = {
+//     title: getValue("title"),
+//     image: getValue("image"),
+//     description: getValue("discription"),
+//     category: getValue("category"),
+//   };
+
+// }
+const Serching = (value) => {
+  let temp = HomePageShow.filter((ele) =>
+    ele.title.toLowerCase().includes(value.toLowerCase())
+  );
+  Uimaker(temp);
+};
+
+document.getElementById("search").addEventListener("input", () => {
+  let value = getValue("search");
+  Serching(value);
+});
+
+
+// category filter
+const FilterByCategory = (category) => {
+  if (category == "all") {
+    Uimaker(HomePageShow);
+    return;
+  }
+
+  let temp = HomePageShow.filter((ele) => ele.category == category);
+  Uimaker(temp);
+};
+
+document
+  .getElementById("helth")
+  .addEventListener("click", () => FilterByCategory("helth"));
+
+document
+  .getElementById("sports")
+  .addEventListener("click", () => FilterByCategory("sports"));
+
+document
+  .getElementById("education")
+  .addEventListener("click", () => FilterByCategory("education"));
+
+document
+  .getElementById("all")
+  .addEventListener("click", () => FilterByCategory("all"));
+
+
+

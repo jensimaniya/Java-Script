@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <!-- stylesheet conect start -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- stylesheet conect end -->
+  </head>
+  <body>
+    <a href="./newsList.html">Home Page</a>
     <form id="news">
-        <input type="text" placeholder="title" id="title">
+      <input type="text" placeholder="title" id="title" />
 
-        <input type="text" placeholder="Discription" id="discription">
+      <!-- <input type="text" placeholder="Discription" id="discription" /> -->
+       <textarea  id="discription" cols="23" rows="3 " placeholder="Discription"></textarea>
 
-        <input type="src" placeholder="image" id="image">
+      <input type="src" placeholder="image" id="image" /> 
 
-        <select id="category">
-            <option value="">select</option>
-            <option value="helth">Helth</option>
-            <option value="sports">Sports</option>
-            <option value="education">Education</option>
-        </select>
+      <select id="category">
+        <option value="">select</option>
+        <option value="helth">Helth</option>
+        <option value="sports">Sports</option>
+        <option value="education">Education</option>
+      </select>
 
-        <input type="submit" value="create">
-        
+      <input type="submit" value="create" id="btn" />
     </form>
-    <div id="newsList">
-
-    </div>
-
-
     
-    
-</body>
-<script src="./script.js"></script>
+  </body>
+  <!-- js script attechment start -->
+  <script src="./script.js"></script>
+  <!-- js script attechment end -->
+
 </html>
