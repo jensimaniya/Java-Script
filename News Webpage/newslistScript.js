@@ -7,7 +7,7 @@ const Uimaker = (HomePageShow) => {
     title.innerHTML = ele.title;
 
     let discription = document.createElement("p");
-    discription.innerHTML = ele.discription;
+    discription.innerHTML = ele.description;
 
     let category = document.createElement("p");
     category.innerHTML = ele.category;
