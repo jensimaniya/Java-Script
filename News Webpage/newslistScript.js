@@ -39,16 +39,7 @@ Uimaker(HomePageShow);
 const getValue = (id) => {
   return document.getElementById(id).value;
 };
-// const handleSubmit = (e) => {
-//   e.preventDefault();
-//   let New = {
-//     title: getValue("title"),
-//     image: getValue("image"),
-//     description: getValue("discription"),
-//     category: getValue("category"),
-//   };
 
-// }
 const Serching = (value) => {
   let temp = HomePageShow.filter((ele) =>
     ele.title.toLowerCase().includes(value.toLowerCase())

@@ -70,4 +70,59 @@ img {
 #newsList div{
    margin: 30px;
    gap: 8px;
+   
+  margin-left: 55px;
+}
+
+#search{
+    padding: 5px;
+    margin: 30px;
+}
+
+#helth{
+    height: 40px;
+    width: 100px;
+    border: none;
+    background-color:rgba(244, 239, 241, 0.78) ;
+    box-shadow: 1px 1px 1px 1px lightgrey ;
+}
+
+#sports{
+    height: 40px;
+    width: 100px;
+    border: none;
+    background-color:rgba(244, 239, 241, 0.78) ;
+    box-shadow: 1px 1px 1px 1px lightgrey ;
+
+}
+
+#education{
+     height: 40px;
+    width: 100px;
+    border: none;
+    background-color:rgba(244, 239, 241, 0.78) ;
+    box-shadow: 1px 1px 1px 1px lightgrey ;
+
+}
+
+#all{
+     height: 40px;
+    width: 100px;
+    border: none;
+    background-color:rgba(244, 239, 241, 0.78) ;
+    box-shadow: 1px 1px 1px 1px lightgrey ;
+
+
+}
+
+.btnDIV{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.searchDIV{
+     display: flex;
+    justify-content: center;
+
 }

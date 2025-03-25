@@ -1,5 +1,5 @@
 // blank array create...
-let BreakingNews = JSON.parse(localStorage.getItem("BreakingNews")) || [];
+// let BreakingNews = JSON.parse(localStorage.getItem("BreakingNews")) || [];
 
 let HomePageShow = JSON.parse(localStorage.getItem("HomePageShow")) || [];
 
@@ -49,15 +49,13 @@ const handleSubmit = (e) => {
     category: getValue("category"),
   };
   // console.log(New);
-  BreakingNews.push(New);
-  localStorage.setItem("BreakingNews", JSON.stringify(BreakingNews));
+  // BreakingNews.push(New);
+  // localStorage.setItem("BreakingNews", JSON.stringify(BreakingNews));
 
   HomePageShow.push(New);
   localStorage.setItem("HomePageShow", JSON.stringify(HomePageShow));
-  // uiMaker(BreakingNews);
+  
 };
-// uiMaker(BreakingNews);
+
 
 document.getElementById("news").addEventListener("submit", handleSubmit);
-
-
