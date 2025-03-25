@@ -33,7 +33,6 @@ const Uimaker = (HomePageShow) => {
 
 Uimaker(HomePageShow);
 
-
 // serching
 
 const getValue = (id) => {
@@ -51,7 +50,6 @@ document.getElementById("search").addEventListener("input", () => {
   let value = getValue("search");
   Serching(value);
 });
-
 
 // category filter
 const FilterByCategory = (category) => {
@@ -79,6 +77,3 @@ document
 document
   .getElementById("all")
   .addEventListener("click", () => FilterByCategory("all"));
-
-
-
