@@ -181,6 +181,7 @@ let products = [
   },
 ];
 
+// add to wish list mate blank array create kryo
 let Wishlist = JSON.parse(localStorage.getItem("Wishlist")) || [];
 
 // Function to display products
@@ -205,14 +206,14 @@ const displayProducts = (products) => {
 
   document.getElementById("container").innerHTML = temp;
 
-  // Attach event listeners to "Add to Wish List" buttons after products are rendered
+  // add to wish list mate no code 
   const addToWishListButtons = document.querySelectorAll(".AddToWishList");
   addToWishListButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
       const productId = e.target.getAttribute("data-id");
       const product = products.find((p) => p.id == productId);
 
-      // Check if the product is already in the wishlist
+      
       if (IsExists(product.id)) {
         alert("This product is already in your wishlist.");
       } else {
@@ -224,7 +225,7 @@ const displayProducts = (products) => {
   });
 };
 
-// Function to check if a product already exists in the wishlist
+
 const IsExists = (id) => {
   return Wishlist.some((product) => product.id == id);
 };
@@ -252,6 +253,7 @@ document
   .getElementById("lth")
   .addEventListener("click", () => handleSort("lth"));
 
+  // fot category
 const handlefilter = (category) => {
   if (category == "All") {
     displayProducts(products);
@@ -292,7 +294,7 @@ document
 
 
 
-
+// for serching
 
 const Serching = (value) => {
   let temp = products.filter((ele) =>
