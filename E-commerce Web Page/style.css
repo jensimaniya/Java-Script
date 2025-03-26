@@ -1,0 +1,112 @@
+/* univarsal proparty start */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* universal proparty end */
+
+/* header start */
+.header {
+  height: 60px;
+  max-width: 1009%;
+  background-color: lightgrey;
+  gap: 400px;
+}
+
+/* header end */
+
+/* baner start */
+.img1 {
+  height: 600px;
+  width: 100%;
+  margin-top: 20px;
+}
+/* baner end */
+
+/* product Page start */
+.img {
+  height: 150px;
+  margin-bottom: 20px;
+  transition: transform 2s ease;
+}
+.img:hover {
+  transform: scale(1.1);
+}
+.title {
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  padding: 10px;
+}
+
+.price {
+  text-align: center;
+  padding: 5px;
+}
+
+.rate {
+  text-align: center;
+  padding: 5px;
+}
+
+.box {
+  border-radius: 10px;
+  height: 450px;
+  width: 300px;
+  background-color: lightgrey;
+  box-shadow: 2px 2px 2px 3px silver;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 40px;
+}
+
+.BTNbuy {
+  height: 30px;
+  width: 90px;
+  border: none;
+  border-radius: 10px;
+  background-color: lightgray;
+  font-size: 15px;
+}
+
+.ImgDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TitleDiv {
+  /* height: 170px; */
+}
+
+.PriceDiv {
+  /* height: 50px; */
+}
+
+.RateDiv {
+  /* height: 50px; */
+}
+
+.BTNDiv {
+  display: flex;
+  justify-content: center;
+}
+.WishListDIV {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+/* product page end */
+
+.ButtonDIV{
+  display: flex;
+  justify-content: space-evenly;
+
+}

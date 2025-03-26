@@ -7,20 +7,18 @@
 .img {
   width: 200px;
   height: 260px;
- 
+
   margin-bottom: 30px;
   transition: transform 2s ease;
 }
-.img:hover{
-  
-    transform: scale(1.1);
-
+.img:hover {
+  transform: scale(1.1);
 }
 .title {
   text-align: center;
 }
 
-.title:hover{
+.title:hover {
   color: darkgrey;
 }
 
@@ -43,53 +41,46 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  
+
   padding: 40px;
 }
-  
 
-.BTNbuy{
-    height: 50px;
-    width: 150px;
-    
-    border: none;
-    border-radius: 20px;
-    background-color: lightgray;
-    font-size: 30px;
-    
+.BTNbuy {
+  height: 50px;
+  width: 150px;
+
+  border: none;
+  border-radius: 20px;
+  background-color: lightgray;
+  font-size: 30px;
 }
 
-.BTNbuy:hover{
+.BTNbuy:hover {
   border: 2px solid black;
   background-color: azure;
 }
 
-
-
-.ImgDiv{
-    height: 360px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.ImgDiv {
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
- .TitleDiv{
-    height: 170px;
+.TitleDiv {
+  height: 170px;
 }
 
-.PriceDiv{
-    height: 50px;
-} 
-
-.RateDiv{
+.PriceDiv {
   height: 50px;
-
 }
 
+.RateDiv {
+  height: 50px;
+}
 
-.BTNDiv{
-    display: flex;
-   
-    
-    justify-content: center;
+.BTNDiv {
+  display: flex;
+
+  justify-content: center;
 }

@@ -1799,7 +1799,7 @@ let products =
   ]
  
 
-let temp = " "
+let temp = " ";
 
 for (let i = 0; i < products.length; i++) {
   temp += ` <div class="col-lg-3 col-md-6 py-3">
@@ -1807,7 +1807,7 @@ for (let i = 0; i < products.length; i++) {
         <div class="ImgDiv"><img src=${products[i].thumbnail} alt="" class="img"> </div>
         <div class="TitleDiv"><h2 class="title">${products[i].title}</h2></div>
         <p>${products[i].description}</p>
-       <div class="PriceDiv"> <p class="price">${products[i].price}</p></div>
+       <div class="PriceDiv"> <p class="price"> ${products[i].price}</p></div>
         <div class="RateDiv"><p class="rate">${products[i].rating}</p></div>
         <p class="rate">${products[i].dimensions.width}</p>
         <p class="rate">${products[i].tags[1]}</p>
