@@ -193,7 +193,7 @@ const displayProducts = (products) => {
       <div class="box">
         <div class="ImgDiv"><img src=${products[i].img} alt="" class="img"> </div>
         <div class="TitleDiv"><h3 class="title">${products[i].title}</h3></div>
-        <div class="description"><p>${products[i].description}</p></div>
+        <div class="description"><p class="description overflow-auto">${products[i].description}</p></div>
         <div class="PriceDiv"> <p class="price"> $ ${products[i].price} </p></div>
         <p class="rate">${products[i].category}</p>
         <div class="BTNDiv"><button class="BTNbuy">Buy</button></div>
@@ -215,11 +215,11 @@ const displayProducts = (products) => {
 
       
       if (IsExists(product.id)) {
-        alert("This product is already in your wishlist.");
+         alert(`${product.title} is already in your wishlist.`);
       } else {
         Wishlist.push(product);
         localStorage.setItem("Wishlist", JSON.stringify(Wishlist));
-        alert("Your product has been added to the wishlist!");
+        alert(` ${product.title}  has been added to the wishlist!`);
       }
     });
   });
@@ -230,14 +230,14 @@ const IsExists = (id) => {
   return Wishlist.some((product) => product.id == id);
 };
 
-// Call displayProducts with the products array
+
 displayProducts(products);
 
 // for sorting
 const handleSort = (orderby) => {
-  if (orderby === "lth") {
+  if (orderby == "lth") {
     products.sort((a, b) => a.price - b.price);
-  } else if (orderby === "htl") {
+  } else if (orderby == "htl") {
     products.sort((a, b) => b.price - a.price);
   }
 

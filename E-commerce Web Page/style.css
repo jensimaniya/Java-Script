@@ -39,22 +39,27 @@
 
 .description {
   text-align: center;
-  padding: 10px;
+ margin: 2px;
+  padding: 0;
+  
+ 
 }
 
 .price {
   text-align: center;
-  padding: 5px;
+  margin: 0;
+  padding: 0;
 }
 
 .rate {
   text-align: center;
-  padding: 5px;
+ margin: 0;
+  padding: 0;
 }
 
 .box {
   border-radius: 10px;
-  height: 450px;
+  height: 490px;
   width: 300px;
   background-color: lightgrey;
   box-shadow: 2px 2px 2px 3px silver;
@@ -79,7 +84,7 @@
 .ImgDiv {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .TitleDiv {
@@ -105,8 +110,13 @@
 }
 /* product page end */
 
+
+/* html product page for button style */
 .ButtonDIV{
   display: flex;
   justify-content: space-evenly;
 
 }
+
+
+/* login page */
