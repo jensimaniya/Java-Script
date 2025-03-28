@@ -1,6 +1,5 @@
 // let users = JSON.parse(localStorage.getItem("users ")) || [];
 
-
 // const IsExists = (email) => {
 //     let isUser = users.find((user) => user.email === email);
 
@@ -11,10 +10,6 @@
 //         return false
 //     }
 // };
-
-
-
-
 
 // const handleSubmit = (e) => {
 //     e.preventDefault();
@@ -39,12 +34,7 @@
     
 // }
 
-
-
-
 // document.getElementById("SignUp").addEventListener("click", handleSubmit);
-
-
 
 
 let users = JSON.parse(localStorage.getItem("users")) || [];
@@ -79,6 +69,4 @@ const handleSubmit = (e) => {
 };
 
 // Ensure you're adding the event listener on the form, not the button
-
-
 document.getElementById("SignUp").addEventListener("submit", handleSubmit);

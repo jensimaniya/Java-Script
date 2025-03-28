@@ -13,17 +13,21 @@ const displayCart = () => {
   // Display Wishlist items
   cartContainer.innerHTML = Wishlist.map(
     (item, index) => `
-    <div class="cart-item">
-      <div class="col-lg-4 col-md-6 py-3">
-        <div class="box">
-          <div class="flex"><img src="${item.img}" alt="" class="img-fluid im"></div>
-          <div class="flex"><h3 class="ti">${item.title}</h3></div>
-          <div class="flex"><p class="des">${item.description}</p></div>
-          <div class="flex"><p class="ti1">$${item.price}</p></div>
-          <div class="flex"><p class="ti1">${item.category}</p></div>
-          <button class="btn btn-danger" onclick="removeFromCart(${index})">DELETE</button>
-        </div>
+    <div class="cart-item  col-lg-3 col-md-6 py-3 ms-5">
+      
+
+      <div class="box">
+        <div class="ImgDiv"><img src=${item.img} alt="" class="img"> </div>
+        <div class="TitleDiv"><h3 class="title">${item.title}</h3></div>
+        <div class="description"><p class="description overflow-auto">${item.description}</p></div>
+        <div class="PriceDiv"> <p class="price"> $ ${item.price} </p></div>
+        <p class="rate">${item.category}</p>
+       <div class="BTNDiv"> <button class="btn btn-danger" onclick="removeFromCart(${index})">DELETE</button>
+
+         </div>
       </div>
+
+
     </div>
   `
   ).join("");

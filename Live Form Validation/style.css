@@ -32,10 +32,7 @@ input {
   font-size: 1rem;
 }
 
-/* input:hover {
-  border-color: palevioletred;
-  outline: none;
-} */
+
 
 input[type="submit"] {
   background: #0b0b0b;
