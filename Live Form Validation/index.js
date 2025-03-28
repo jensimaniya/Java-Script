@@ -13,7 +13,7 @@ const handleUserData = (e) => {
 
 document.getElementById("userData").addEventListener("submit", handleUserData);
 
-// live validation
+// without function live validation form
 
 document.querySelector("#username").addEventListener("input", (e) => {
   let username = e.target.value; //getValue("username");
@@ -25,6 +25,10 @@ document.querySelector("#username").addEventListener("input", (e) => {
     document.getElementById("username").setAttribute("class", "err");
   }
 });
+
+
+
+// using function for Live validation Form
 
 const validation = (id, type) => {
   document.getElementById(id).setAttribute("class", type);
