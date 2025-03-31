@@ -13,26 +13,38 @@
 }
 #signup {
   border: 2px solid black;
-  height: 300px;
-  width: 300px;
+  height: 320px;
+  width: 280px;
   margin: auto;
  display: flex;
  justify-content: center;
  flex-direction: column;
+ align-items: center;
  gap: 10px;
+ background-color: rgb(213, 212, 212);
+ border: none;
+ border-radius: 5px;
+ box-shadow: 1.5px 2px 2px rgb(60, 59, 59);
+ 
 
   
 }
 
 #name{
-    padding: 5px;
+    padding: 8px;
+    border-radius: 3px;
+    border: none;
 }
 #email{
-     padding: 5px;
+    padding: 8px;
+    border-radius: 3px;
+    border: none;
 
 }
 #Password{
-    padding: 5px;
+   padding: 8px;
+    border-radius: 3px;
+    border: none;
 
 }
 .nameDiv {
