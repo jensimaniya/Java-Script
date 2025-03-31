@@ -1,44 +1,93 @@
-let Wishlist = JSON.parse(localStorage.getItem("Wishlist")) || [];
+// Initialize cart from localStorage or set an empty array
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+// Function to display cart items
 const displayCart = () => {
-  let cartContainer = document.getElementById("cart-items");
   let temp = "";
+  let total = 0;
 
-  // Check if the Wishlist is empty
-  if (Wishlist.length === 0) {
-    cartContainer.innerHTML = "<p>Your cart is empty.</p>";
-    return;
+  // If cart has items
+  if (cart.length > 0) {
+    cart.forEach((product) => {
+      total += product.price * product.quantity;
+      temp += `
+      <div class="cart-item">
+        <div class="cart-item-details">
+          <img src="${product.img}" alt="" class="cart-item-img">
+          <div class="cart-item-info">
+            <h3>${product.title}</h3>
+            <p>$ ${product.price}</p>
+            <div class="quantity">
+              <button class="decrease-quantity" data-id="${product.id}">-</button>
+              <span>${product.quantity}</span>
+              <button class="increase-quantity" data-id="${product.id}">+</button>
+            </div>
+            <button class="remove-item" data-id="${product.id}">Remove</button>
+          </div>
+        </div>
+      </div>`;
+    });
+
+    // Display total price
+    temp += `
+    <div class="cart-total">
+      <h3>Total: $ ${total.toFixed(2)}</h3>
+      <button class="checkout-btn">Checkout</button>
+    </div>`;
+  } else {
+    // If cart is empty
+    temp = "<p>Your cart is empty.</p>";
   }
 
-  // Display Wishlist items
-  cartContainer.innerHTML = Wishlist.map(
-    (item, index) => `
-    <div class="cart-item  col-lg-3 col-md-6 py-3 ms-5">
-      
+  document.getElementById("cart-container").innerHTML = temp;
 
-      <div class="box">
-        <div class="ImgDiv"><img src=${item.img} alt="" class="img"> </div>
-        <div class="TitleDiv"><h3 class="title">${item.title}</h3></div>
-        <div class="description"><p class="description overflow-auto">${item.description}</p></div>
-        <div class="PriceDiv"> <p class="price"> $ ${item.price} </p></div>
-        <p class="rate">${item.category}</p>
-       <div class="BTNDiv"> <button class="btn btn-danger" onclick="removeFromCart(${index})">DELETE</button>
+  // Add event listeners for quantity increase/decrease and remove buttons
+  document.querySelectorAll(".decrease-quantity").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const productId = e.target.getAttribute("data-id");
+      updateCartQuantity(productId, "decrease");
+      displayCart();  // Update the cart display
+    });
+  });
 
-         </div>
-      </div>
+  document.querySelectorAll(".increase-quantity").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const productId = e.target.getAttribute("data-id");
+      updateCartQuantity(productId, "increase");
+      displayCart();  // Update the cart display
+    });
+  });
 
-
-    </div>
-  `
-  ).join("");
+  // Remove product from cart
+  document.querySelectorAll(".remove-item").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const productId = e.target.getAttribute("data-id");
+      removeProductFromCart(productId);
+      displayCart();  // Update the cart display
+    });
+  });
 };
 
-// Function to remove an item from the Wishlist
-const removeFromCart = (index) => {
-  Wishlist.splice(index, 1); // Remove the item at the given index
-  localStorage.setItem("Wishlist", JSON.stringify(Wishlist)); // Save the updated Wishlist back to localStorage
-  displayCart(); // Re-render the cart to reflect the changes
+// Update the quantity of a product in the cart
+const updateCartQuantity = (id, action = "increase") => {
+  cart = cart.map((product) => {
+    if (product.id == id) {
+      if (action === "increase") {
+        product.quantity += 1;
+      } else if (action === "decrease" && product.quantity > 1) {
+        product.quantity -= 1;
+      }
+    }
+    return product;
+  });
+  localStorage.setItem("cart", JSON.stringify(cart));  // Save the updated cart to localStorage
 };
 
-// Display cart items when the page loads
+// Remove a product from the cart
+const removeProductFromCart = (id) => {
+  cart = cart.filter((product) => product.id != id);  // Filter out the product with the given id
+  localStorage.setItem("cart", JSON.stringify(cart));  // Save the updated cart to localStorage
+};
+
+// Initial cart display
 displayCart();

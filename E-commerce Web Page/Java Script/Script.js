@@ -181,24 +181,152 @@ let products = [
   },
 ];
 
-// add to wish list mate blank array create kryo
-let Wishlist = JSON.parse(localStorage.getItem("Wishlist")) || [];
+// // add to wish list mate blank array create kryo
+// let Wishlist = JSON.parse(localStorage.getItem("Wishlist")) || [];
+
+// // Function to display products
+// const displayProducts = (products) => {
+//   let temp = " ";
+//   for (let i = 0; i < products.length; i++) {
+//     temp += `
+//     <div class="col-lg-3 col-md-6 py-3">
+//       <div class="box">
+//         <div class="ImgDiv"><img src=${products[i].img} alt="" class="img"> </div>
+//         <div class="TitleDiv"><h3 class="title">${products[i].title}</h3></div>
+//         <div class="description"><p class="description overflow-auto">${products[i].description}</p></div>
+//         <div class="PriceDiv"> <p class="price"> $ ${products[i].price} </p></div>
+//         <p class="rate">${products[i].category}</p>
+//         <div class="BTNDiv"><button class="BTNbuy">Buy</button></div>
+//         <div class="WishListDIV">
+//           <button class="AddToWishList" data-id="${products[i].id}">Add Wish List</button>
+//         </div>
+//       </div>
+//     </div>`;
+//   }
+
+//   document.getElementById("container").innerHTML = temp;
+
+//   // add to wish list mate no code
+//   const addToWishListButtons = document.querySelectorAll(".AddToWishList");
+//   addToWishListButtons.forEach((button) => {
+//     button.addEventListener("click", (e) => {
+//       const productId = e.target.getAttribute("data-id");
+//       const product = products.find((p) => p.id == productId);
+
+      
+//       if (IsExists(product.id)) {
+//          alert(`${product.title} is already in your wishlist.`);
+//       } else {
+//         Wishlist.push(product);
+//         localStorage.setItem("Wishlist", JSON.stringify(Wishlist));
+//         alert(` ${product.title}  has been added to the wishlist!`);
+//       }
+//     });
+//   });
+// };
+
+
+// const IsExists = (id) => {
+//   return Wishlist.some((product) => product.id == id);
+// };
+
+
+// displayProducts(products);
+
+// // for sorting
+// const handleSort = (orderby) => {
+//   if (orderby == "lth") {
+//     products.sort((a, b) => a.price - b.price);
+//   } else if (orderby == "htl") {
+//     products.sort((a, b) => b.price - a.price);
+//   }
+
+//   displayProducts(products);
+// };
+
+// displayProducts(products);
+
+// document
+//   .getElementById("htl")
+//   .addEventListener("click", () => handleSort("htl"));
+// document
+//   .getElementById("lth")
+//   .addEventListener("click", () => handleSort("lth"));
+
+//   // fot category
+// const handlefilter = (category) => {
+//   if (category == "All") {
+//     displayProducts(products);
+//     return;
+//   }
+//   let temp = products.filter((ele) => ele.category == category);
+//   displayProducts(temp);
+// };
+
+// document
+//   .getElementById("women")
+//   .addEventListener("click", () => handlefilter("Women"));
+
+// document
+//   .getElementById("menswear")
+//   .addEventListener("click", () => handlefilter("Men's Wear"));
+
+// document
+//   .getElementById("beauty")
+//   .addEventListener("click", () => handlefilter("beauty"));
+
+// document
+//   .getElementById("fragrance")
+//   .addEventListener("click", () => handlefilter("fragrances"));
+// document
+//   .getElementById("furniture")
+//   .addEventListener("click", () => handlefilter("furniture"));
+// document
+//   .getElementById("groceries")
+//   .addEventListener("click", () => handlefilter("groceries"));
+// document
+//   .getElementById("girlNeccessary")
+//   .addEventListener("click", () => handlefilter("Girls Necessary"));
+
+// document
+//   .getElementById("all")
+//   .addEventListener("click", () => handlefilter("All"));
+
+
+
+// // for serching
+
+// const Serching = (value) => {
+//   let temp = products.filter((ele) =>
+//     ele.title.toLowerCase().includes(value.toLowerCase())
+//   );
+//   displayProducts(temp);
+// };
+
+// document.getElementById("search").addEventListener("input", () => {
+//   let value = document.getElementById("search").value;
+//   Serching(value);
+// });
+
+
+// Initialize the cart from localStorage or as an empty array
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // Function to display products
 const displayProducts = (products) => {
-  let temp = " ";
+  let temp = "";
   for (let i = 0; i < products.length; i++) {
-    temp += ` 
+    temp += `
     <div class="col-lg-3 col-md-6 py-3">
       <div class="box">
-        <div class="ImgDiv"><img src=${products[i].img} alt="" class="img"> </div>
+        <div class="ImgDiv"><img src="${products[i].img}" alt="" class="img"> </div>
         <div class="TitleDiv"><h3 class="title">${products[i].title}</h3></div>
         <div class="description"><p class="description overflow-auto">${products[i].description}</p></div>
         <div class="PriceDiv"> <p class="price"> $ ${products[i].price} </p></div>
         <p class="rate">${products[i].category}</p>
         <div class="BTNDiv"><button class="BTNbuy">Buy</button></div>
-        <div class="WishListDIV">
-          <button class="AddToWishList" data-id="${products[i].id}">Add Wish List</button>
+        <div class="CartDiv">
+          <button class="AddToCart" data-id="${products[i].id}">Add to Cart</button>
         </div>
       </div>
     </div>`;
@@ -206,105 +334,41 @@ const displayProducts = (products) => {
 
   document.getElementById("container").innerHTML = temp;
 
-  // add to wish list mate no code 
-  const addToWishListButtons = document.querySelectorAll(".AddToWishList");
-  addToWishListButtons.forEach((button) => {
+  // Add to cart functionality
+  const addToCartButtons = document.querySelectorAll(".AddToCart");
+  addToCartButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
       const productId = e.target.getAttribute("data-id");
       const product = products.find((p) => p.id == productId);
 
-      
-      if (IsExists(product.id)) {
-         alert(`${product.title} is already in your wishlist.`);
+      if (isProductInCart(product.id)) {
+        // If product is already in cart, increase its quantity
+        updateCartQuantity(product.id);
       } else {
-        Wishlist.push(product);
-        localStorage.setItem("Wishlist", JSON.stringify(Wishlist));
-        alert(` ${product.title}  has been added to the wishlist!`);
+        // If not, add it to cart
+        cart.push({ ...product, quantity: 1 });
+        localStorage.setItem("cart", JSON.stringify(cart));
       }
+      alert(`${product.title} has been added to your cart!`);
     });
   });
 };
 
-
-const IsExists = (id) => {
-  return Wishlist.some((product) => product.id == id);
+// Check if the product is already in the cart
+const isProductInCart = (id) => {
+  return cart.some((product) => product.id == id);
 };
 
+// Update the quantity of a product in the cart
+const updateCartQuantity = (id) => {
+  cart = cart.map((product) => {
+    if (product.id == id) {
+      product.quantity += 1;
+    }
+    return product;
+  });
+  localStorage.setItem("cart", JSON.stringify(cart));
+};
 
+// Initial display of products
 displayProducts(products);
-
-// for sorting
-const handleSort = (orderby) => {
-  if (orderby == "lth") {
-    products.sort((a, b) => a.price - b.price);
-  } else if (orderby == "htl") {
-    products.sort((a, b) => b.price - a.price);
-  }
-
-  displayProducts(products);
-};
-
-displayProducts(products);
-
-document
-  .getElementById("htl")
-  .addEventListener("click", () => handleSort("htl"));
-document
-  .getElementById("lth")
-  .addEventListener("click", () => handleSort("lth"));
-
-  // fot category
-const handlefilter = (category) => {
-  if (category == "All") {
-    displayProducts(products);
-    return;
-  }
-  let temp = products.filter((ele) => ele.category == category);
-  displayProducts(temp);
-};
-
-document
-  .getElementById("women")
-  .addEventListener("click", () => handlefilter("Women"));
-
-document
-  .getElementById("menswear")
-  .addEventListener("click", () => handlefilter("Men's Wear"));
-
-document
-  .getElementById("beauty")
-  .addEventListener("click", () => handlefilter("beauty"));
-
-document
-  .getElementById("fragrance")
-  .addEventListener("click", () => handlefilter("fragrances"));
-document
-  .getElementById("furniture")
-  .addEventListener("click", () => handlefilter("furniture"));
-document
-  .getElementById("groceries")
-  .addEventListener("click", () => handlefilter("groceries"));
-document
-  .getElementById("girlNeccessary")
-  .addEventListener("click", () => handlefilter("Girls Necessary"));
-
-document
-  .getElementById("all")
-  .addEventListener("click", () => handlefilter("All"));
-
-
-
-// for serching
-
-const Serching = (value) => {
-  let temp = products.filter((ele) =>
-    ele.title.toLowerCase().includes(value.toLowerCase())
-  );
-  displayProducts(temp);
-};
-
-document.getElementById("search").addEventListener("input", () => {
-  let value = document.getElementById("search").value;
-  Serching(value);
-});
-

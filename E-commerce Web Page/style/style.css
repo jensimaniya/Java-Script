@@ -10,7 +10,7 @@
 .header {
   height: 60px;
   max-width: 1009%;
-  background-color: lightgrey;
+  background-color: rgb(82, 89, 82);
   gap: 400px;
 }
 
@@ -22,8 +22,10 @@
   width: 100%;
   background-position: center;
   background-size: contain;
-margin: 0;
-  /* margin-top: 20px; */
+  margin: 0;
+  
+  
+  
 }
 /* baner end */
 
@@ -42,10 +44,8 @@ margin: 0;
 
 .description {
   text-align: center;
- margin: 2px;
+  margin: 2px;
   padding: 0;
-  
- 
 }
 
 .price {
@@ -56,7 +56,7 @@ margin: 0;
 
 .rate {
   text-align: center;
- margin: 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -64,8 +64,8 @@ margin: 0;
   border-radius: 0px;
   height: 490px;
   width: 300px;
-  background-color: lightgrey;
-  box-shadow: 2px 2px 2px 3px silver;
+  background-color: rgb(241, 241, 241);
+  box-shadow: 1.5px 1.5px 1.5px 1.5px silver;
 }
 
 .main {
@@ -111,15 +111,78 @@ margin: 0;
   justify-content: center;
   margin: 5px;
 }
+
+.CartDiv{
+  display: flex;
+  justify-content: center;
+}
 /* product page end */
 
-
 /* html product page for button style */
-.ButtonDIV{
+.ButtonDIV {
   display: flex;
   justify-content: space-evenly;
+}
+
+#lth,#htl,#menswear{
+  height: 40px;
+  width: 100px;
+  background-color:rgb(82, 89, 82) ;
+  border: none;
+ color: lightgray;
+ border-radius: 3px;
+}
+
+
+#women,#beauty{
+  height: 40px;
+  width: 70px;
+  background-color:rgb(82, 89, 82) ;
+  border: none;
+ color: lightgray;
+ border-radius: 3px;
 
 }
 
 
-/* login page */
+#fragrance{
+  height: 40px;
+  width: 90px;
+  background-color:rgb(82, 89, 82) ;
+  border: none;
+ color: lightgray;
+ border-radius: 3px;
+
+}
+
+#groceries,#furniture{
+  height: 40px;
+  width: 80px;
+  background-color:rgb(82, 89, 82) ;
+  border: none;
+ color: lightgray;
+ border-radius: 3px;
+
+}
+
+#girlNeccessary{
+  height: 40px;
+  width: 130px;
+  background-color:rgb(82, 89, 82) ;
+  border: none;
+ color: lightgray;
+ border-radius: 3px;
+
+}
+#all{
+  height: 40px;
+  width: 90px;
+  background-color:rgb(82, 89, 82) ;
+  border: none;
+ color: lightgray;
+ border-radius: 3px;
+
+}
+#search{
+  padding: 5px;
+}
