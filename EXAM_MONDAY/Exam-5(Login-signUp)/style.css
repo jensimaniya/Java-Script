@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.FormMainDiv {
+    
+  height: 100vh;
+  width: 100%;
+  display: flex;
+
+
+  
+}
+#signup {
+  border: 2px solid black;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ gap: 10px;
+
+  
+}
+
+#name{
+    padding: 5px;
+}
+#email{
+     padding: 5px;
+
+}
+#Password{
+    padding: 5px;
+
+}
+.nameDiv {
+    margin: 5px;
+  
+}
+
+
+.emailDiv {
+    margin: 5px;
+ 
+}
