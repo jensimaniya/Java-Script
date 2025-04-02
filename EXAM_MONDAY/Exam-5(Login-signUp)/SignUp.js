@@ -1,5 +1,10 @@
 
 let signup = JSON.parse(localStorage.getItem("signup")) || [];
+
+
+
+
+
 const IsExists = (email) => {
   let isUser = signup.find((user) => user.email === email);
 
@@ -25,11 +30,15 @@ const handlesubmit = (e) => {
     } else {
       signup.push(user);
       localStorage.setItem("signup", JSON.stringify(signup)); // Corrected key
+    
       alert("User created successfully");
       document.getElementById("signup").reset(); // Reset the form
+      
     }
     
     
 };
 
 document.getElementById("signup").addEventListener("submit", handlesubmit);
+
+

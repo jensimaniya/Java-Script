@@ -23,9 +23,6 @@
   background-position: center;
   background-size: contain;
   margin: 0;
-  
-  
-  
 }
 /* baner end */
 
@@ -76,12 +73,13 @@
 }
 
 .BTNbuy {
+   border: none;
+color: lightgray;
+border-radius: 5px;
+  background-color: rgb(82, 89, 82) ;
+  margin-top: 10px;
   height: 30px;
-  width: 90px;
-  border: none;
-  border-radius: 10px;
-  background-color: lightgray;
-  font-size: 15px;
+  width: 95px;
 }
 
 .ImgDiv {
@@ -112,7 +110,17 @@
   margin: 5px;
 }
 
-.CartDiv{
+.AddToCart{
+  border: none;
+color: lightgray;
+border-radius: 5px;
+  background-color: rgb(82, 89, 82) ;
+  margin-top: 10px;
+  height: 32px;
+  width: 95px;
+}
+
+.CartDiv {
   display: flex;
   justify-content: center;
 }
@@ -124,65 +132,142 @@
   justify-content: space-evenly;
 }
 
-#lth,#htl,#menswear{
+#lth,
+#htl,
+#menswear {
   height: 40px;
   width: 100px;
-  background-color:rgb(82, 89, 82) ;
+  background-color: rgb(82, 89, 82);
   border: none;
- color: lightgray;
- border-radius: 3px;
+  color: lightgray;
+  border-radius: 3px;
 }
 
-
-#women,#beauty{
+#women,
+#beauty {
   height: 40px;
   width: 70px;
-  background-color:rgb(82, 89, 82) ;
+  background-color: rgb(82, 89, 82);
   border: none;
- color: lightgray;
- border-radius: 3px;
-
+  color: lightgray;
+  border-radius: 3px;
 }
 
-
-#fragrance{
+#fragrance {
   height: 40px;
   width: 90px;
-  background-color:rgb(82, 89, 82) ;
+  background-color: rgb(82, 89, 82);
   border: none;
- color: lightgray;
- border-radius: 3px;
-
+  color: lightgray;
+  border-radius: 3px;
 }
 
-#groceries,#furniture{
+#groceries,
+#furniture {
   height: 40px;
   width: 80px;
-  background-color:rgb(82, 89, 82) ;
+  background-color: rgb(82, 89, 82);
   border: none;
- color: lightgray;
- border-radius: 3px;
-
+  color: lightgray;
+  border-radius: 3px;
 }
 
-#girlNeccessary{
+#girlNeccessary {
   height: 40px;
   width: 130px;
-  background-color:rgb(82, 89, 82) ;
+  background-color: rgb(82, 89, 82);
   border: none;
- color: lightgray;
- border-radius: 3px;
-
+  color: lightgray;
+  border-radius: 3px;
 }
-#all{
+#all {
   height: 40px;
   width: 90px;
-  background-color:rgb(82, 89, 82) ;
+  background-color: rgb(82, 89, 82);
   border: none;
- color: lightgray;
- border-radius: 3px;
+  color: lightgray;
+  border-radius: 3px;
+}
+#search {
+  padding: 5px;
+}
+
+/* wish list page start */
+.cart-item {
+  display: flex;
+  justify-content: center;
+}
+.cart-item-img {
+  height: 150px;
+}
+
+.cart-item-details {
+  height: 400px;
+  width: 300px;
+  background-color: lightgray;
+  box-shadow: 2px 2px 2px silver;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cartTitle {
+  text-align: center;
+}
+.cartrPrice {
+  text-align: center;
+}
+
+.quantity {
+  text-align: center;
+}
+.remove-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.cartTotal {
+  width: 300px;
+  text-align: center;
+  background-color: lightgray;
+}
+.remove-item{
+  border: none;
+color: lightgray;
+border-radius: 5px;
+  background-color: rgb(82, 89, 82) ;
+  /* margin-top: 10px; */
+  height: 32px;
+  width: 70px;
+  margin: 0;
+  margin: auto;
 
 }
-#search{
-  padding: 5px;
+
+.subTotal{
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 10px;
+  
+}
+
+.decrease-quantity{
+  width: 28px;
+  border: none;
+  text-align: center;
+  color: lightgray;
+border-radius: 2px;
+  background-color: rgb(82, 89, 82) ;
+}
+.increase-quantity{
+  width: 28px;
+  border: none;
+  text-align: center;
+  color: lightgray;
+border-radius: 2px;
+  background-color: rgb(82, 89, 82) ;
+
 }

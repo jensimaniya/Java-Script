@@ -7,7 +7,7 @@
 .header {
   height: 60px;
   max-width: 1009%;
-  background-color: lightgrey;
+  background-color: rgb(82, 89, 82);
   gap: 400px;
 }
 
@@ -22,8 +22,9 @@
     width: 100%;
 }
 #SignUp {
-  background-color: lightgray;
+  background-color: rgb(82, 89, 82);
   box-shadow: 2px 2px 2px 2px silver;
+  color: lightgrey;
   height: 320px;
   width: 250px;
   margin: auto;
@@ -59,3 +60,13 @@
 }
 
 /* sign up form end */
+
+.passed{
+  
+  outline:1.5px solid green ;
+}
+.error{
+  
+  outline:1.5px solid red ;
+
+}

@@ -26,6 +26,7 @@ const handleSubmit = (e) => {
         if (userData.user.password == user.password)
         {
             alert("login success");
+            window.location.href = "../index.html";
         }
         else {
             alert("password does not match")

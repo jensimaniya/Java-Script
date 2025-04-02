@@ -103,6 +103,9 @@ const handleSort = (orderby) => {
     uiMaker(temp);
   }
 };
+
+
+
 document
   .getElementById("htl")
   .addEventListener("click", () => handleSort("htl"));

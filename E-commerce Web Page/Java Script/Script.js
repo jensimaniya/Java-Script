@@ -233,80 +233,12 @@ let products = [
 
 // displayProducts(products);
 
-// // for sorting
-// const handleSort = (orderby) => {
-//   if (orderby == "lth") {
-//     products.sort((a, b) => a.price - b.price);
-//   } else if (orderby == "htl") {
-//     products.sort((a, b) => b.price - a.price);
-//   }
-
-//   displayProducts(products);
-// };
-
-// displayProducts(products);
-
-// document
-//   .getElementById("htl")
-//   .addEventListener("click", () => handleSort("htl"));
-// document
-//   .getElementById("lth")
-//   .addEventListener("click", () => handleSort("lth"));
-
-//   // fot category
-// const handlefilter = (category) => {
-//   if (category == "All") {
-//     displayProducts(products);
-//     return;
-//   }
-//   let temp = products.filter((ele) => ele.category == category);
-//   displayProducts(temp);
-// };
-
-// document
-//   .getElementById("women")
-//   .addEventListener("click", () => handlefilter("Women"));
-
-// document
-//   .getElementById("menswear")
-//   .addEventListener("click", () => handlefilter("Men's Wear"));
-
-// document
-//   .getElementById("beauty")
-//   .addEventListener("click", () => handlefilter("beauty"));
-
-// document
-//   .getElementById("fragrance")
-//   .addEventListener("click", () => handlefilter("fragrances"));
-// document
-//   .getElementById("furniture")
-//   .addEventListener("click", () => handlefilter("furniture"));
-// document
-//   .getElementById("groceries")
-//   .addEventListener("click", () => handlefilter("groceries"));
-// document
-//   .getElementById("girlNeccessary")
-//   .addEventListener("click", () => handlefilter("Girls Necessary"));
-
-// document
-//   .getElementById("all")
-//   .addEventListener("click", () => handlefilter("All"));
 
 
 
-// // for serching
 
-// const Serching = (value) => {
-//   let temp = products.filter((ele) =>
-//     ele.title.toLowerCase().includes(value.toLowerCase())
-//   );
-//   displayProducts(temp);
-// };
 
-// document.getElementById("search").addEventListener("input", () => {
-//   let value = document.getElementById("search").value;
-//   Serching(value);
-// });
+
 
 
 // Initialize the cart from localStorage or as an empty array
@@ -318,10 +250,10 @@ const displayProducts = (products) => {
   for (let i = 0; i < products.length; i++) {
     temp += `
     <div class="col-lg-3 col-md-6 py-3">
-      <div class="box">
+      <div class="box overflow-auto">
         <div class="ImgDiv"><img src="${products[i].img}" alt="" class="img"> </div>
         <div class="TitleDiv"><h3 class="title">${products[i].title}</h3></div>
-        <div class="description"><p class="description overflow-auto">${products[i].description}</p></div>
+        <div class="description"><p class="description">${products[i].description}</p></div>
         <div class="PriceDiv"> <p class="price"> $ ${products[i].price} </p></div>
         <p class="rate">${products[i].category}</p>
         <div class="BTNDiv"><button class="BTNbuy">Buy</button></div>
@@ -372,3 +304,81 @@ const updateCartQuantity = (id) => {
 
 // Initial display of products
 displayProducts(products);
+
+
+
+
+// for serching
+
+const Serching = (value) => {
+  let temp = products.filter((ele) =>
+    ele.title.toLowerCase().includes(value.toLowerCase())
+  );
+  displayProducts(temp);
+};
+
+document.getElementById("search").addEventListener("input", () => {
+  let value = document.getElementById("search").value;
+  Serching(value);
+});
+
+  // fot category
+const handlefilter = (category) => {
+  if (category == "All") {
+    displayProducts(products);
+    return;
+  }
+  let temp = products.filter((ele) => ele.category == category);
+  displayProducts(temp);
+};
+
+document
+  .getElementById("women")
+  .addEventListener("click", () => handlefilter("Women"));
+
+document
+  .getElementById("menswear")
+  .addEventListener("click", () => handlefilter("Men's Wear"));
+
+document
+  .getElementById("beauty")
+  .addEventListener("click", () => handlefilter("beauty"));
+
+document
+  .getElementById("fragrance")
+  .addEventListener("click", () => handlefilter("fragrances"));
+document
+  .getElementById("furniture")
+  .addEventListener("click", () => handlefilter("furniture"));
+document
+  .getElementById("groceries")
+  .addEventListener("click", () => handlefilter("groceries"));
+document
+  .getElementById("girlNeccessary")
+  .addEventListener("click", () => handlefilter("Girls Necessary"));
+
+document
+  .getElementById("all")
+  .addEventListener("click", () => handlefilter("All"));
+
+
+  // for sorting
+const handleSort = (orderby) => {
+  if (orderby == "lth") {
+    products.sort((a, b) => a.price - b.price);
+  } else if (orderby == "htl") {
+    products.sort((a, b) => b.price - a.price);
+  }
+
+  displayProducts(products);
+};
+
+displayProducts(products);
+
+document
+  .getElementById("htl")
+  .addEventListener("click", () => handleSort("htl"));
+document
+  .getElementById("lth")
+  .addEventListener("click", () => handleSort("lth"));
+
