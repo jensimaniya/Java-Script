@@ -16,6 +16,106 @@
     <!-- Bootstreap end -->
 </head>
 <body>
+  <!-- header start -->
+    <header>
+      <div
+        class="container-fluid d-flex justify-content-between header align-items-center"
+      >
+        <h1>Pomato</h1>
+        <nav class="d-lg-block d-none">
+          <ul
+            class="d-flex justify-content-around align-items-center mt-2 gap-4 list-unstyled"
+          >
+            <li>
+              <a href="../index.html" class="text-decoration-none text-dark fs-5">Home</a>
+            </li>
+            <li>
+              <a
+                href="../Pages/ProductPage.html"
+                class="text-decoration-none text-dark fs-5"
+                >Product Page</a
+              >
+            </li>
+            <li>
+              <a href="../Pages/AddToWishList.html" class="text-decoration-none text-dark fs-5">Add Wish List</a>
+            </li>
+            
+
+            <li>
+              <a href="../Pages/SignUp.html" class="text-decoration-none text-dark fs-5"
+                >Sign Up</a
+              >
+            </li>
+            <li>
+              <a href="../Pages/LogIn.html" class="text-decoration-none text-dark fs-5">Log In</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="d-lg-none d-md-block">
+          <button
+            class="btn btn-light"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasScrolling"
+            aria-controls="offcanvasScrolling"
+          >
+            <a href="#"><i class="fa-solid fa-bars text-dark icon"></i></a>
+          </button>
+
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            data-bs-backdrop="false"
+            tabindex="-1"
+            id="offcanvasScrolling"
+            aria-labelledby="offcanvasScrollingLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+                Header Menu
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <nav>
+                <ul class="d-flex gap-4 list-unstyled flex-column">
+                  <li>
+                    <a href="../index.html" class="text-decoration-none text-dark fs-4"
+                      >Home</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../Pages/ProductPage.html"
+                      class="text-decoration-none text-dark fs-4"
+                      >Product Page</a
+                    >
+                  </li>
+                  
+                  <li>
+                    <a href="../Pages/SignUp.html" class="text-decoration-none text-dark fs-4"
+                      >Sign Up</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../Pages/LogIn.html" class="text-decoration-none text-dark fs-4"
+                      >Log In</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <h1>Your Wishlist</h1>
     <div id="cart-container" class="row " ></div> 
     

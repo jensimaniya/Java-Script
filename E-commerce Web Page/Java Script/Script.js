@@ -181,57 +181,14 @@ let products = [
   },
 ];
 
-// // add to wish list mate blank array create kryo
-// let Wishlist = JSON.parse(localStorage.getItem("Wishlist")) || [];
-
-// // Function to display products
-// const displayProducts = (products) => {
-//   let temp = " ";
-//   for (let i = 0; i < products.length; i++) {
-//     temp += `
-//     <div class="col-lg-3 col-md-6 py-3">
-//       <div class="box">
-//         <div class="ImgDiv"><img src=${products[i].img} alt="" class="img"> </div>
-//         <div class="TitleDiv"><h3 class="title">${products[i].title}</h3></div>
-//         <div class="description"><p class="description overflow-auto">${products[i].description}</p></div>
-//         <div class="PriceDiv"> <p class="price"> $ ${products[i].price} </p></div>
-//         <p class="rate">${products[i].category}</p>
-//         <div class="BTNDiv"><button class="BTNbuy">Buy</button></div>
-//         <div class="WishListDIV">
-//           <button class="AddToWishList" data-id="${products[i].id}">Add Wish List</button>
-//         </div>
-//       </div>
-//     </div>`;
-//   }
-
-//   document.getElementById("container").innerHTML = temp;
-
-//   // add to wish list mate no code
-//   const addToWishListButtons = document.querySelectorAll(".AddToWishList");
-//   addToWishListButtons.forEach((button) => {
-//     button.addEventListener("click", (e) => {
-//       const productId = e.target.getAttribute("data-id");
-//       const product = products.find((p) => p.id == productId);
-
-      
-//       if (IsExists(product.id)) {
-//          alert(`${product.title} is already in your wishlist.`);
-//       } else {
-//         Wishlist.push(product);
-//         localStorage.setItem("Wishlist", JSON.stringify(Wishlist));
-//         alert(` ${product.title}  has been added to the wishlist!`);
-//       }
-//     });
-//   });
-// };
 
 
-// const IsExists = (id) => {
-//   return Wishlist.some((product) => product.id == id);
-// };
 
 
-// displayProducts(products);
+
+
+
+
 
 
 
@@ -264,7 +221,7 @@ const displayProducts = (products) => {
     </div>`;
   }
 
-  document.getElementById("container").innerHTML = temp;
+    document.getElementById("container").innerHTML = temp;
 
   // Add to cart functionality
   const addToCartButtons = document.querySelectorAll(".AddToCart");
@@ -274,10 +231,8 @@ const displayProducts = (products) => {
       const product = products.find((p) => p.id == productId);
 
       if (isProductInCart(product.id)) {
-        // If product is already in cart, increase its quantity
         updateCartQuantity(product.id);
       } else {
-        // If not, add it to cart
         cart.push({ ...product, quantity: 1 });
         localStorage.setItem("cart", JSON.stringify(cart));
       }
@@ -286,7 +241,7 @@ const displayProducts = (products) => {
   });
 };
 
-// Check if the product is already in the cart
+
 const isProductInCart = (id) => {
   return cart.some((product) => product.id == id);
 };

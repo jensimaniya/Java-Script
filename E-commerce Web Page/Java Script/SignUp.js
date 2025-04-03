@@ -26,6 +26,7 @@ const handleSubmit = (e) => {
     users.push(user);
     localStorage.setItem("users", JSON.stringify(users)); 
     alert("User created successfully");
+    window.location.href = "./LogIn.html";
     document.getElementById("SignUp").reset(); 
   }
 };
