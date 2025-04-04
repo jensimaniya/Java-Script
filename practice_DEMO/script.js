@@ -181,143 +181,58 @@ let products = [
   },
 ];
 
+let cart = JSON.parse(localStorage.getItem("cart"))||[];
 
-// Initialize the cart from localStorage or as an empty array
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-// Function to display products
-const displayProducts = (products) => {
-  let temp = "";
+const uiMaker = (products) => {
+  temp = "";
   for (let i = 0; i < products.length; i++) {
     temp += `
-    <div class="col-lg-3 col-md-6 py-3">
-      <div class="box overflow-auto">
-        <div class="ImgDiv"><img src="${products[i].img}" alt="" class="img"> </div>
-        <div class="TitleDiv"><h3 class="title">${products[i].title}</h3></div>
-        <div class="description"><p class="description">${products[i].description}</p></div>
-        <div class="PriceDiv"> <p class="price"> $ ${products[i].price} </p></div>
-        <p class="rate">${products[i].category}</p>
-        <div class="BTNDiv"><button class="BTNbuy">Buy</button></div>
-        <div class="CartDiv">
-          <button class="AddToCart" data-id="${products[i].id}">Add to Cart</button>
-        </div>
-      </div>
-    </div>`;
-  }
+        <div>
+        <img src="${products[i].img}">
+        <p>${products[i].id}</p>
+        <h3>${products[i].title}</h3>
+        <p>${products[i].description}</p>
+        <p>${products[i].category}</p>
+        <p>$ ${products[i].price}</p>
+        <button onclick="addToCart(${products[i].id})">Add to Cart</button>
 
-    document.getElementById("container").innerHTML = temp;
-
-  // Add to cart functionality
-  const addToCartButtons = document.querySelectorAll(".AddToCart");
-  addToCartButtons.forEach((button) => {
-    button.addEventListener("click", (e) => {
-      const productId = e.target.getAttribute("data-id");
-      const product = products.find((p) => p.id == productId);
-
-      if (isProductInCart(product.id)) {
-        updateCartQuantity(product.id);
-      } else {
-        cart.push({ ...product, quantity: 1 });
-        localStorage.setItem("cart", JSON.stringify(cart));
-      }
-      alert(`${product.title} has been added to your cart!`);
-    });
-  });
-};
-
-
-const isProductInCart = (id) => {
-  return cart.some((product) => product.id == id);
-};
-
-// Update the quantity of a product in the cart
-const updateCartQuantity = (id) => {
-  cart = cart.map((product) => {
-    if (product.id == id) {
-      product.quantity += 1;
+        </div>`;
     }
-    return product;
-  });
-  localStorage.setItem("cart", JSON.stringify(cart));
+    document.getElementById("productShow").innerHTML = temp;
+    localStorage.setItem("cart", JSON.stringify(cart)); 
 };
 
-// Initial display of products
-displayProducts(products);
+uiMaker(products);
+
+
+  const addToCart = (productId) => {
+    let product = products.find((item) => item.id === productId);
+    let existingProduct = cart.find((item) => item.id === productId);
+
+    if (existingProduct) {
+      // Increase quantity if product already exists in cart
+      existingProduct.quantity += 1;
+    } else {
+      // Add new product to cart with quantity 1
+      product.quantity = 1;
+      cart.push(product);
+    }
+
+    // Update the cart in localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+  };
+
+//   const goToCart = () => {
+//     document.getElementById("productShow").style.display = "none";
+//     document.getElementById("cartPage").style.display = "block";
+//     displayCart();
+//   };
+
+//   const goBackToProducts = () => {
+//     document.getElementById("cartPage").style.display = "none";
+//     document.getElementById("productShow").style.display = "block";
+//   };
 
 
 
-
-// for serching
-
-const Serching = (value) => {
-  let temp = products.filter((ele) =>
-    ele.title.toLowerCase().includes(value.toLowerCase())
-  );
-  displayProducts(temp);
-};
-
-document.getElementById("search").addEventListener("input", () => {
-  let value = document.getElementById("search").value;
-  Serching(value);
-});
-
-  // fot category
-const handlefilter = (category) => {
-  if (category == "All") {
-    displayProducts(products);
-    return;
-  }
-  let temp = products.filter((ele) => ele.category == category);
-  displayProducts(temp);
-};
-
-document
-  .getElementById("women")
-  .addEventListener("click", () => handlefilter("Women"));
-
-document
-  .getElementById("menswear")
-  .addEventListener("click", () => handlefilter("Men's Wear"));
-
-document
-  .getElementById("beauty")
-  .addEventListener("click", () => handlefilter("beauty"));
-
-document
-  .getElementById("fragrance")
-  .addEventListener("click", () => handlefilter("fragrances"));
-document
-  .getElementById("furniture")
-  .addEventListener("click", () => handlefilter("furniture"));
-document
-  .getElementById("groceries")
-  .addEventListener("click", () => handlefilter("groceries"));
-document
-  .getElementById("girlNeccessary")
-  .addEventListener("click", () => handlefilter("Girls Necessary"));
-
-document
-  .getElementById("all")
-  .addEventListener("click", () => handlefilter("All"));
-
-
-  // for sorting
-const handleSort = (orderby) => {
-  if (orderby == "lth") {
-    products.sort((a, b) => a.price - b.price);
-  } else if (orderby == "htl") {
-    products.sort((a, b) => b.price - a.price);
-  }
-
-  displayProducts(products);
-};
-
-displayProducts(products);
-
-document
-  .getElementById("htl")
-  .addEventListener("click", () => handleSort("htl"));
-document
-  .getElementById("lth")
-  .addEventListener("click", () => handleSort("lth"));
 
