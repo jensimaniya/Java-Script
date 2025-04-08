@@ -182,6 +182,73 @@ let products = [
 ];
 
 
+// // Initialize the cart from localStorage or as an empty array
+// let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// // Function to display products
+// const displayProducts = (products) => {
+//   let temp = "";
+//   for (let i = 0; i < products.length; i++) {
+//     temp += `
+//     <div class="col-lg-3 col-md-6 py-3">
+//       <div class="box overflow-auto">
+//         <div class="ImgDiv"><img src="${products[i].img}" alt="" class="img"> </div>
+//         <div class="TitleDiv"><h3 class="title">${products[i].title}</h3></div>
+//         <div class="description"><p class="description">${products[i].description}</p></div>
+//         <div class="PriceDiv"> <p class="price"> $ ${products[i].price} </p></div>
+//         <p class="rate">${products[i].category}</p>
+//         <div class="BTNDiv"><button class="BTNbuy">Buy</button></div>
+//         <div class="CartDiv">
+//           <button class="AddToCart" data-id="${products[i].id}">Add to Cart</button>
+//         </div>
+//       </div>
+//     </div>`;
+//   }
+
+//     document.getElementById("container").innerHTML = temp;
+
+//   // Add to cart functionality
+//   const addToCartButtons = document.querySelectorAll(".AddToCart");
+//   addToCartButtons.forEach((button) => {
+//     button.addEventListener("click", (e) => {
+//       const productId = e.target.getAttribute("data-id");
+//       const product = products.find((p) => p.id == productId);
+
+//       if (isProductInCart(product.id)) {
+//         updateCartQuantity(product.id);
+//       } else {
+//         cart.push({ ...product, quantity: 1 });
+//         localStorage.setItem("cart", JSON.stringify(cart));
+//       }
+//       alert(`${product.title} has been added to your cart!`);
+//     });
+//   });
+// };
+
+
+// const isProductInCart = (id) => {
+//   return cart.some((product) => product.id == id);
+// };
+
+// // Update the quantity of a product in the cart
+// const updateCartQuantity = (id) => {
+//   cart = cart.map((product) => {
+//     if (product.id == id) {
+//       product.quantity += 1;
+//     }
+//     return product;
+//   });
+//   localStorage.setItem("cart", JSON.stringify(cart));
+// };
+
+// // Initial display of products
+// displayProducts(products);
+
+
+
+
+
+
 // Initialize the cart from localStorage or as an empty array
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -205,7 +272,7 @@ const displayProducts = (products) => {
     </div>`;
   }
 
-    document.getElementById("container").innerHTML = temp;
+  document.getElementById("container").innerHTML = temp;
 
   // Add to cart functionality
   const addToCartButtons = document.querySelectorAll(".AddToCart");
@@ -219,13 +286,13 @@ const displayProducts = (products) => {
       } else {
         cart.push({ ...product, quantity: 1 });
         localStorage.setItem("cart", JSON.stringify(cart));
+        alert(`${product.title} has been added to your cart!`);
       }
-      alert(`${product.title} has been added to your cart!`);
     });
   });
 };
 
-
+// Check if the product is already in the cart
 const isProductInCart = (id) => {
   return cart.some((product) => product.id == id);
 };
@@ -239,10 +306,47 @@ const updateCartQuantity = (id) => {
     return product;
   });
   localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Quantity updated in your cart!");
+};
+
+// Display cart page with product quantities
+const displayCart = () => {
+  let cartHtml = "";
+  cart.forEach((product) => {
+    cartHtml += `
+      <div class="cart-item">
+        <img src="${product.img}" alt="${product.title}" class="cart-img">
+        <p>${product.title}</p>
+        <p>Price: $${product.price}</p>
+        <p>Quantity: ${product.quantity}</p>
+        <button class="remove-from-cart" data-id="${product.id}">Remove</button>
+      </div>`;
+  });
+  document.getElementById("cart-container").innerHTML = cartHtml;
+
+  // Remove item from cart functionality
+  const removeButtons = document.querySelectorAll(".remove-from-cart");
+  removeButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const productId = e.target.getAttribute("data-id");
+      removeFromCart(productId);
+    });
+  });
+};
+
+// Remove product from cart
+const removeFromCart = (id) => {
+  cart = cart.filter((product) => product.id !== id);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  displayCart(); // Re-display the cart after removal
 };
 
 // Initial display of products
 displayProducts(products);
+
+// Optionally, call displayCart when navigating to the cart page
+// displayCart();
+
 
 
 

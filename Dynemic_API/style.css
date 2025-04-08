@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.img{
+    height: 100px;
+    width: 100px;
+}
+.green{
+    color: green;
+}
+
+.red{
+    color: red;
+}
+
+.box{
+    height: 400px;
+    width: 350px;
+    border: 2px solid black;
+    margin: auto;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+}

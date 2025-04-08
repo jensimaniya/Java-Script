@@ -13,7 +13,11 @@ const IsExists = (email) => {
 
 
 const handleSubmit = (e) => {
-  e.preventDefault(); 
+    e.preventDefault(); 
+    const emailerror = document.getElementById("email-error");
+    const passregex = document.getElementById("password-error");
+    const SuccessFully = document.getElementById("success");
+  
   let user = {
     email: document.getElementById("email").value,
     password: document.getElementById("password").value,
@@ -25,15 +29,23 @@ const handleSubmit = (e) => {
     if (userData.found) {
         if (userData.user.password == user.password)
         {
-            alert("login success");
-            window.location.href = "../index.html";
+            // alert("login success");
+            SuccessFully.style.display = "inline-block";
+           
+            setTimeout(() => {
+               window.location.href = "../index.html";
+            }, 1500);
         }
         else {
-            alert("password does not match")
+            // alert("password does not match")
+            passregex.innerHTML = "Invalid Password";
+            passregex.style.color = "red";
         }
     }
     else {
-        alert("invalid email");
+        // alert("invalid email");
+        emailerror.innerHTML = "Invalid email";
+        emailerror.style.color = "red";
     }
     
   
