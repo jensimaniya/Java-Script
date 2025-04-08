@@ -1,17 +1,16 @@
-
 let data = [];
 const uiMaker = (data) => {
   let temp = "";
   for (let i = 0; i < data.length; i++) {
     temp += `
     <div class="col-lg-3 box  ">
-      <h1></h1>
-      <img src=${data[i].image} alt="" class="img"/>
+     <img src=${data[i].image} alt="" class="img"/>
       <h3>${data[i].title}</h3>
       <h3>${data[i].category}</h3>
       <p>${data[i].price}</p>
       <p  class=${data[i].rating.rate > 3 ? "green" : "red"} >${
-        data[i].rating.rate}</p>
+      data[i].rating.rate
+    }</p>
       
       <button>buy</button>
 
@@ -22,30 +21,20 @@ const uiMaker = (data) => {
   document.getElementById("container").innerHTML = temp;
 };
 
-
-
-
-
-
 const getData = async () => {
   try {
-    let req = await fetch("https://dogapi.dog/api/v2/breeds");
+    let req = await fetch("https://fakestoreapi.com/products");
     let res = await req.json();
-     data=res
+    data = res;
     uiMaker(res);
   } catch (error) {
     console.log(error.message);
   }
 };
 
-
 getData();
 
-
-
-
-
-  // fot category
+// fot category
 const handlefilter = (category) => {
   if (category === "all") {
     uiMaker(data);
@@ -58,43 +47,38 @@ const handlefilter = (category) => {
 };
 
 document
-  .getElementById("mens-clothing") 
+  .getElementById("mens-clothing")
   .addEventListener("click", () => handlefilter("men's clothing"));
 
-   document
-     .getElementById("jwellry") 
-     .addEventListener("click", () => handlefilter("jewelery"));
+document
+  .getElementById("jwellry")
+  .addEventListener("click", () => handlefilter("jewelery"));
 
-    document
-      .getElementById("electronics") 
-      .addEventListener("click", () => handlefilter("electronics"));
+document
+  .getElementById("electronics")
+  .addEventListener("click", () => handlefilter("electronics"));
 
-    document
-      .getElementById("womencloth") 
-      .addEventListener("click", () => handlefilter("women's clothing"));
-      
+document
+  .getElementById("womencloth")
+  .addEventListener("click", () => handlefilter("women's clothing"));
 
-  document
-    .getElementById("all")
-    .addEventListener("click", () => handlefilter("all"));
+document
+  .getElementById("all")
+  .addEventListener("click", () => handlefilter("all"));
 
-
-
-    // for serching
+// for serching
 
 const Serching = (value) => {
   let temp = data.filter((ele) =>
     ele.title.toLowerCase().includes(value.toLowerCase())
   );
   uiMaker(temp);
-
 };
 
 document.getElementById("search").addEventListener("input", () => {
   let value = document.getElementById("search").value;
   Serching(value);
   console.log(value);
-  
 });
 
 // let data = []; // Global variable to store fetched data
@@ -173,8 +157,3 @@ document.getElementById("search").addEventListener("input", () => {
 //   let value = document.getElementById("search").value;
 //   Serching(value);
 // });
-
-
-
-
-
