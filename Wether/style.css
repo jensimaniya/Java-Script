@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('https://i.postimg.cc/bYQptgPz/background.jpg') no-repeat center center/cover;
+  gap: 20px;
+}
+
+/* Search Input */
+#search {
+  width: 300px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+#search::placeholder {
+  color: #ffffffaa;
+  text-transform: capitalize;
+}
+
+/* Output Container */
+.container {
+  position: relative;
+  width: 400px;
+  height: 85vh;
+  background: linear-gradient(250deg ,#fdd70069, #154f95be);
+  backdrop-filter: blur(30px);
+  border: 2px solid lightcyan;
+  border-radius: 16px;
+  padding: 20px;
+  color: #fff;
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+/* Animate on load */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Weather Header */
+.weather__header {
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 0.2s;
+  margin: 0;
+  padding: 0;
+}
+
+.weather__units span {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Weather Body */
+.weather__body {
+  text-align: center;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.weather__city {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.weather__datetime {
+  font-size: 14px;
+  /* margin-top: 5px; */
+}
+
+.weather__forecast {
+  font-size: 18px;
+  /* margin: 10px 0; */
+  text-transform: capitalize;
+}
+
+.weather__icon img {
+  width: 100px;
+  height: 100px;
+}
+
+.weather__temperature {
+  font-size: 50px;
+  font-weight: bold;
+  /* margin: 10px 0; */
+}
+
+.weather__minmax {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 10px 0; */
+}
+
+/* Weather Info Cards */
+.weather__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* margin-top: 10px; */
+  gap: 10px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.weather__card {
+  display: flex;
+  align-items: center;
+  width: 48%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transform: translateY(20px);
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+.weather__card i {
+  font-size: 30px;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.weather__card p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

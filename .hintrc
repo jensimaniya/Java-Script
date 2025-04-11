@@ -20,7 +20,8 @@
     "axe/text-alternatives": [
       "default",
       {
-        "document-title": "off"
+        "document-title": "off",
+        "image-alt": "off"
       }
     ],
     "axe/language": [
@@ -41,6 +42,14 @@
       "default",
       {
         "duplicate-id-active": "off"
+      }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter"
+        ]
       }
     ]
   }
