@@ -104,8 +104,6 @@ const handleSort = (orderby) => {
   }
 };
 
-
-
 document
   .getElementById("htl")
   .addEventListener("click", () => handleSort("htl"));

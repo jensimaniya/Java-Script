@@ -211,9 +211,11 @@ uiMaker(products);
 
     if (existingProduct) {
       // Increase quantity if product already exists in cart
+      alert("product is already in your cart")
       existingProduct.quantity += 1;
     } else {
       // Add new product to cart with quantity 1
+      alert("product add to cart")
       product.quantity = 1;
       cart.push(product);
     }
