@@ -146,7 +146,7 @@ const Serching = (value) => {
   uiMaker(temp);
 };
 
-document.getElementById("search").addEventListener("input", () => {
-  let value = getValue("search");
+document.getElementById("search").addEventListener("input", (e) => {
+  let value = getValue("search"); // e.target.value
   Serching(value);
 });

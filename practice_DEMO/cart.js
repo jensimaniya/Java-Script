@@ -1,7 +1,5 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-
-
 const displayCart = () => {
   let cartItems = "";
   cart.map((item) => {
@@ -30,4 +28,4 @@ const updateQuantity = (productId, change) => {
     displayCart();
   }
 };
- displayCart();
+displayCart();

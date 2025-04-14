@@ -210,7 +210,6 @@ img {
   }
   #like {
     grid-template-columns: repeat(1, 1fr);
-    /* padding: 30px; */
     gap: 25px;
   }
 }

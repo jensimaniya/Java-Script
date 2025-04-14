@@ -1,4 +1,3 @@
-
 // post method call
 const createProduct = async (product) => {
   let req = await fetch("http://localhost:3000/products", {
@@ -7,7 +6,6 @@ const createProduct = async (product) => {
     body: JSON.stringify(product),
   });
   let res = await req.json();
-  console.log(res);
   uimaker(res);
 };
 
@@ -20,26 +18,24 @@ const getData = async () => {
     res.forEach((product) => {
       uimaker(product);
     });
-  } catch (error) { 
+  } catch (error) {
     console.log(error.message);
   }
 };
 
 getData();
 
-
 // form ma value leva mate
 const handleSubmit = (e) => {
   e.preventDefault();
-  let product = {
+  let products = {
     title: document.getElementById("title").value,
     price: document.getElementById("price").value,
     img: document.getElementById("img").value,
   };
 
-  createProduct(product);
+  createProduct(products);
 };
-
 
 // make uiMaker
 const uimaker = (product) => {
@@ -59,7 +55,6 @@ const uimaker = (product) => {
 
   document.getElementById("productList").append(div);
 };
-
 
 // accsing form
 document.getElementById("productdata").addEventListener("submit", handleSubmit);

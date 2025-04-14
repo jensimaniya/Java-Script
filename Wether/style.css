@@ -11,7 +11,8 @@ body {
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  background: url('https://i.postimg.cc/bYQptgPz/background.jpg') no-repeat center center/cover;
+  background: url("https://i.postimg.cc/bYQptgPz/background.jpg") no-repeat
+    center center/cover;
   gap: 20px;
 }
 
@@ -38,7 +39,7 @@ body {
   position: relative;
   width: 400px;
   height: 85vh;
-  background: linear-gradient(250deg ,#fdd70069, #154f95be);
+  background: linear-gradient(250deg, #fdd70069, #154f95be);
   backdrop-filter: blur(30px);
   border: 2px solid lightcyan;
   border-radius: 16px;
@@ -90,12 +91,10 @@ body {
 
 .weather__datetime {
   font-size: 14px;
-  /* margin-top: 5px; */
 }
 
 .weather__forecast {
   font-size: 18px;
-  /* margin: 10px 0; */
   text-transform: capitalize;
 }
 
@@ -107,13 +106,11 @@ body {
 .weather__temperature {
   font-size: 50px;
   font-weight: bold;
-  /* margin: 10px 0; */
 }
 
 .weather__minmax {
   display: flex;
   justify-content: space-between;
-  /* margin: 10px 0; */
 }
 
 /* Weather Info Cards */
@@ -121,7 +118,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* margin-top: 10px; */
   gap: 10px;
   opacity: 0;
   animation: fadeInUp 0.8s ease forwards;

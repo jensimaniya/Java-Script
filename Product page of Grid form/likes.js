@@ -26,7 +26,7 @@ const Uimaker = (Like) => {
 
     // create a div
     let div = document.createElement("div");
-    div.append(img, title, price,category, btn);
+    div.append(img, title, price, category, btn);
     document.getElementById("like").append(div);
   });
 };

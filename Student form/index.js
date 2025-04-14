@@ -1,4 +1,3 @@
-// let students = [];
 let students = JSON.parse(localStorage.getItem("students")) || [];
 
 // delete all data mate
@@ -42,7 +41,6 @@ const uiMaker = () => {
     td7.append(but);
 
     but.addEventListener("click", () => handleDelete(i));
-    
 
     let tr = document.createElement("tr");
     tr.append(td1, td2, td3, td4, td5, td6, td7);

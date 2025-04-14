@@ -181,7 +181,7 @@ let products = [
   },
 ];
 
-let cart = JSON.parse(localStorage.getItem("cart"))||[];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const uiMaker = (products) => {
   temp = "";
@@ -197,32 +197,31 @@ const uiMaker = (products) => {
         <button onclick="addToCart(${products[i].id})">Add to Cart</button>
 
         </div>`;
-    }
-    document.getElementById("productShow").innerHTML = temp;
-    localStorage.setItem("cart", JSON.stringify(cart)); 
+  }
+  document.getElementById("productShow").innerHTML = temp;
+  localStorage.setItem("cart", JSON.stringify(cart));
 };
 
 uiMaker(products);
 
+const addToCart = (productId) => {
+  let product = products.find((item) => item.id === productId);
+  let existingProduct = cart.find((item) => item.id === productId);
 
-  const addToCart = (productId) => {
-    let product = products.find((item) => item.id === productId);
-    let existingProduct = cart.find((item) => item.id === productId);
+  if (existingProduct) {
+    // Increase quantity if product already exists in cart
+    alert("product is already in your cart");
+    existingProduct.quantity += 1;
+  } else {
+    // Add new product to cart with quantity 1
+    alert("product add to cart");
+    product.quantity = 1;
+    cart.push(product);
+  }
 
-    if (existingProduct) {
-      // Increase quantity if product already exists in cart
-      alert("product is already in your cart")
-      existingProduct.quantity += 1;
-    } else {
-      // Add new product to cart with quantity 1
-      alert("product add to cart")
-      product.quantity = 1;
-      cart.push(product);
-    }
-
-    // Update the cart in localStorage
-    localStorage.setItem("cart", JSON.stringify(cart));
-  };
+  // Update the cart in localStorage
+  localStorage.setItem("cart", JSON.stringify(cart));
+};
 
 //   const goToCart = () => {
 //     document.getElementById("productShow").style.display = "none";
@@ -234,7 +233,3 @@ uiMaker(products);
 //     document.getElementById("cartPage").style.display = "none";
 //     document.getElementById("productShow").style.display = "block";
 //   };
-
-
-
-
