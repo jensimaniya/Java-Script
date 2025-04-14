@@ -57,7 +57,7 @@ const getData = async () => {
   } catch (error) {
     console.log(error.message);
   }
-};
+}; 
 
 getData();
 

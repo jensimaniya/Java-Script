@@ -1,10 +1,23 @@
 {
-  "user": [
+  "products": [
+   
     {
-      "id": "5db6",
-      "name": "js",
-      "password": "js",
-      "email": "js@gmail.com"
+      "id": "d316",
+      "title": "n",
+      "price": "45",
+      "img": "https://www.shaburis.com/cdn/shop/products/il_fullxfull.2742789937_7391_1024x1024.jpg?v=1606517824"
+    },
+    {
+      "id": "8304",
+      "title": "hyy",
+      "price": "2343",
+      "img": "https://www.shaburis.com/cdn/shop/products/il_fullxfull.2742789937_7391_1024x1024.jpg?v=1606517824"
+    },
+    {
+      "id": "9e0a",
+      "title": "dffert",
+      "price": "5456",
+      "img": "https://www.shaburis.com/cdn/shop/products/il_fullxfull.2742789937_7391_1024x1024.jpg?v=1606517824"
     }
   ]
 }

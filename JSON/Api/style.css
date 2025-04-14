@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lilita One', cursive;
+  background-color: #f4e2d8;
+  color: #502314;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔥 Header */
+header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffcc00;
+  padding: 20px 40px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+}
+
+header img.logo {
+  height: 50px;
+  width: auto;
+}
+
+/* 🔥 Logo animation */
+.logo {
+  height: 60px;
+  width: auto;
+  animation: flameBounce 2s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+@keyframes flameBounce {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-2deg);
+  }
+}
+
+
+header h1 {
+  font-size: 28px;
+  color: #d62300;
+  text-shadow: 1px 1px #fff;
+}
+
+/* 🧾 Form */
+form {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+}
+
+form input[type="text"],
+form input[type="url"],
+form input[type="number"] {
+  padding: 10px;
+  border: 2px solid #d62300;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+form input[type="submit"] {
+  background-color: #d62300;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #ff3300;
+}
+
+/* 🍔 Product Cards */
+#productList {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 20px 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+#productList div {
+  background-color: #fff;
+  border: 2px solid #ffcc00;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+#productList div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+#productList img {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+}
+
+/* 🍟 Title and Price Styling */
+#productList h3::before {
+  content: "🔥 ";
+  color: #d62300;
+}
+
+#productList h3 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#productList h5 {
+  font-size: 16px;
+  color: #6b8e23;
+}

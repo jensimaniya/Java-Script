@@ -26,7 +26,7 @@ const getData = async () => {
     let req = await fetch("https://dogapi.dog/api/v2/breeds");
     let res = await req.json();
     data = res;
-    uiMaker(res);
+    uiMaker(res);                                          
   } catch (error) {
     console.log(error.message);
   }
