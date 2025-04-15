@@ -5,19 +5,14 @@ const createProduct = async (product) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(product),
   });
-  let res = await req.json();
-  uimaker(res);
 };
 
-// get data method call
+// data get karva mate
 const getData = async () => {
   try {
     let req = await fetch("http://localhost:3000/products");
-    res = await req.json();
-
-    res.forEach((product) => {
-      uimaker(product);
-    });
+    let res = await req.json();
+    uimaker(res);
   } catch (error) {
     console.log(error.message);
   }
@@ -38,22 +33,24 @@ const handleSubmit = (e) => {
 };
 
 // make uiMaker
-const uimaker = (product) => {
-  let title = document.createElement("h3");
-  title.innerText = product.title;
+const uimaker = (products) => {
+  products.map((product) => {
+    let title = document.createElement("h3");
+    title.innerText = product.title;
 
-  let price = document.createElement("h5");
-  price.innerText = product.price;
+    let price = document.createElement("h5");
+    price.innerText = product.price;
 
-  let img = document.createElement("img");
-  img.src = product.img;
-  img.style.width = "150px";
-  img.style.height = "150px";
+    let img = document.createElement("img");
+    img.src = product.img;
+    img.style.width = "150px";
+    img.style.height = "150px";
 
-  let div = document.createElement("div");
-  div.append(img, title, price);
+    let div = document.createElement("div");
+    div.append(img, title, price);
 
-  document.getElementById("productList").append(div);
+    document.getElementById("productList").append(div);
+  });
 };
 
 // accsing form
