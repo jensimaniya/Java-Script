@@ -20,6 +20,15 @@ const getData = async () => {
 
 getData();
 
+// delete method
+
+const deleteData = async (id) => {
+  await fetch(`http://localhost:3000/products/${id}`, {
+    method: "DELETE",
+    
+  });
+};
+
 // form ma value leva mate
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -46,8 +55,14 @@ const uimaker = (products) => {
     img.style.width = "150px";
     img.style.height = "150px";
 
+    let dltBtn = document.createElement("button")
+    dltBtn.innerHTML = "Delete"
+    dltBtn.addEventListener("click", () => deleteData(product.id));
+    
+
+
     let div = document.createElement("div");
-    div.append(img, title, price);
+    div.append(img, title, price,dltBtn);
 
     document.getElementById("productList").append(div);
   });
