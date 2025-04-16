@@ -1,6 +1,8 @@
+let allProducts = [];
+
 // post method call
 const createProduct = async (product) => {
-  let req = await fetch("http://localhost:3000/products", {
+  await fetch("http://localhost:3000/products", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(product),
@@ -12,7 +14,8 @@ const getData = async () => {
   try {
     let req = await fetch("http://localhost:3000/products");
     let res = await req.json();
-    uimaker(res);
+    allProducts = res;
+    uimaker(allProducts);
   } catch (error) {
     console.log(error.message);
   }
@@ -25,7 +28,6 @@ getData();
 const deleteData = async (id) => {
   await fetch(`http://localhost:3000/products/${id}`, {
     method: "DELETE",
-    
   });
 };
 
@@ -43,6 +45,7 @@ const handleSubmit = (e) => {
 
 // make uiMaker
 const uimaker = (products) => {
+  document.getElementById("productList").innerHTML = "";
   products.map((product) => {
     let title = document.createElement("h3");
     title.innerText = product.title;
@@ -55,14 +58,12 @@ const uimaker = (products) => {
     img.style.width = "150px";
     img.style.height = "150px";
 
-    let dltBtn = document.createElement("button")
-    dltBtn.innerHTML = "Delete"
+    let dltBtn = document.createElement("button");
+    dltBtn.innerHTML = "Delete";
     dltBtn.addEventListener("click", () => deleteData(product.id));
-    
-
 
     let div = document.createElement("div");
-    div.append(img, title, price,dltBtn);
+    div.append(img, title, price, dltBtn);
 
     document.getElementById("productList").append(div);
   });
@@ -70,3 +71,14 @@ const uimaker = (products) => {
 
 // accsing form
 document.getElementById("productdata").addEventListener("submit", handleSubmit);
+
+const Serching = (value) => {
+  let temp = allProducts.filter((ele) =>
+    ele.title.toLowerCase().includes(value.toLowerCase())
+  );
+  uimaker(temp);
+};
+document.getElementById("search").addEventListener("input", (e) => {
+  let value = e.target.value;
+  Serching(value);
+});

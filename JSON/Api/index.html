@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Burger King Product Menu</title>
-  <link rel="stylesheet" href="./style.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burger King Product Menu</title>
+    <link rel="stylesheet" href="./style.css" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://seeklogo.com/images/B/burger-king-logo-8D8EA7DCB8-seeklogo.com.png"
+        alt="prodects"
+        class="logo"
+      />
+      <h1>Products</h1>
+    </header>
 
-  <header>
-  <img
-    src="https://seeklogo.com/images/B/burger-king-logo-8D8EA7DCB8-seeklogo.com.png"
-    alt="prodects"
-    class="logo"
-  />
-  <h1>Products</h1>
-</header>
+    <form id="productdata">
+      <input type="text" id="title" placeholder="Enter Name" required />
+      <input type="url" id="img" placeholder="Image URL" required />
+      <input type="number" id="price" placeholder="Price" required />
+      <input type="submit" value=" submit" />
+    </form>
 
+    <input type="search" placeholder="Search" id="search" />
 
+    <div id="productList"></div>
 
-  <form id="productdata">
-    <input type="text" id="title" placeholder="Enter Name" required />
-    <input type="url" id="img" placeholder="Image URL" required />
-    <input type="number" id="price" placeholder="Price" required />
-    <input type="submit" value=" submit" />
-  </form>
-
-
-  <div id="productList"></div>
-
-  <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>

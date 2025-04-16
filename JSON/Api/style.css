@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Lilita One', cursive;
+  font-family: "Lilita One", cursive;
   background-color: #f4e2d8;
   color: #502314;
   display: flex;
@@ -37,14 +37,14 @@ header img.logo {
 }
 
 @keyframes flameBounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
   50% {
     transform: translateY(-8px) rotate(-2deg);
   }
 }
-
 
 header h1 {
   font-size: 28px;
