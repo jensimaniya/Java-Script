@@ -1,4 +1,5 @@
-let allProducts = [];
+// let allProducts = [];
+let id = -1;
 
 // post method call
 const createProduct = async (product) => {
@@ -31,6 +32,28 @@ const deleteData = async (id) => {
   });
 };
 
+//set value function
+
+const setValue = (id, value) => {
+  document.getElementById(id).value = value;
+};
+
+const update = async (data) => {
+  await fetch(`http://localhost:3000/products/${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+};
+
+const addToform = (data) => {
+  setValue("title", data.title);
+  setValue("price", data.price);
+  setValue("img", data.img);
+  id = data.id;
+  setValue("type", "update");
+};
+
 // form ma value leva mate
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -40,7 +63,12 @@ const handleSubmit = (e) => {
     img: document.getElementById("img").value,
   };
 
-  createProduct(products);
+  // createProduct(products);
+  if (id == -1) {
+    createProduct(products);
+  } else {
+    update(products);
+  }
 };
 
 // make uiMaker
@@ -62,8 +90,12 @@ const uimaker = (products) => {
     dltBtn.innerHTML = "Delete";
     dltBtn.addEventListener("click", () => deleteData(product.id));
 
+    let updateBtn = document.createElement("button");
+    updateBtn.innerHTML = "Update";
+    updateBtn.addEventListener("click", () => addToform(product));
+
     let div = document.createElement("div");
-    div.append(img, title, price, dltBtn);
+    div.append(img, title, price, dltBtn, updateBtn);
 
     document.getElementById("productList").append(div);
   });
@@ -72,6 +104,7 @@ const uimaker = (products) => {
 // accsing form
 document.getElementById("productdata").addEventListener("submit", handleSubmit);
 
+// for serching
 const Serching = (value) => {
   let temp = allProducts.filter((ele) =>
     ele.title.toLowerCase().includes(value.toLowerCase())
@@ -82,3 +115,21 @@ document.getElementById("search").addEventListener("input", (e) => {
   let value = e.target.value;
   Serching(value);
 });
+
+// for sorting
+const handleSort = (orderby) => {
+  if (orderby == "lth") {
+    let temp = allProducts.sort((a, b) => a.price - b.price);
+    uimaker(temp);
+  } else {
+    let temp = allProducts.sort((a, b) => b.price - a.price);
+    uimaker(temp);
+  }
+};
+
+document
+  .getElementById("htl")
+  .addEventListener("click", () => handleSort("htl"));
+document
+  .getElementById("lth")
+  .addEventListener("click", () => handleSort("lth"));

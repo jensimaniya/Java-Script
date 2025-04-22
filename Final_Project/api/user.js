@@ -19,6 +19,15 @@ const userMethod = {
             await fetch(`${Baseurl}/${id}`, {
                 method: "DELETE",
             })
+    },
+        
+        //log in signup mate 
+    login: async (user) => {
+            let req = await fetch(
+              `${Baseurl}?email=${user.email}&password=${user.password}`
+        );
+        let res = await req.json()
+        return res;
         }
                 
    
