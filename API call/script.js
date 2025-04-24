@@ -1,4 +1,4 @@
-let data = [];
+// let data = [];
 
 // create an array for Like button
 let Like = JSON.parse(localStorage.getItem("Likes")) || [];

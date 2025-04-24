@@ -41,3 +41,6 @@ let arr7 = [1, 2, 3, 4, 5];
 let arr8 = [6, 7, 8, 9, 10];
 let arr9 = [...arr7, ...arr8];
 console.log(arr9);
+
+
+

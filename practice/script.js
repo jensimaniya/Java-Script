@@ -26,6 +26,14 @@ let value = document.getElementById("count1").innerHTML;
     if (count == value)
       count=0
     
-  },100)
+  }, 100)
+  
+
+
+
+
+
+  
+
 
 

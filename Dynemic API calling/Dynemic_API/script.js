@@ -1,5 +1,3 @@
-let Like = JSON.parse(localStorage.getItem("Like")) || [];
-
 // Function to handle UI
 const uiMaker = (data) => {
   let temp = "";
@@ -14,39 +12,10 @@ const uiMaker = (data) => {
         <p class="${Item.rating.rate > 3 ? "green" : "red"}">${
       Item.rating.rate
     }</p>
-        <button class="likeBTN" data-id="${Item.id}">Like</button>
-
-      </div>
-    `;
+      </div>`;
   });
 
   document.getElementById("container").innerHTML = temp;
-
-  // Find by Id
-  const IsExists = (id) => {
-    for (let i = 0; i < Like.length; i++) {
-      if (Like[i].id == id) {
-        return true;
-      }
-    }
-    return false;
-  };
-
-  let LikeButtons = document.querySelector(".likeBTN");
-  
-  LikeButtons.addEventListener("click", () => {
-    if (IsExists(data.id)) {
-      console.log("alreay exists procucts");
-
-      //  alert("alery Exists this Product");
-    } else {
-      Like.push(data);
-      localStorage.setItem("Like", JSON.stringify(Like));
-      console.log("Your Product is Added");
-
-      //  alert("Your Product is Added");
-    }
-  });
 };
 
 const getData = async () => {
@@ -57,7 +26,7 @@ const getData = async () => {
   } catch (error) {
     console.log(error.message);
   }
-}; 
+};
 
 getData();
 

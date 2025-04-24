@@ -38,6 +38,8 @@ const setValue = (id, value) => {
   document.getElementById(id).value = value;
 };
 
+
+// update method
 const update = async (data) => {
   await fetch(`http://localhost:3000/products/${id}`, {
     method: "PUT",

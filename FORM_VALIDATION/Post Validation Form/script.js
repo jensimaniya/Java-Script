@@ -26,10 +26,3 @@ const handleUserData = (e) => {
 };
 
 document.getElementById("userData").addEventListener("submit", handleUserData);
-
-
-
-
-
-
-
