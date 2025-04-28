@@ -1,11 +1,3 @@
-// post method call
-const createProduct = async (product) => {
-  await fetch("http://localhost:3000/products", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(product),
-  });
-};
 
 // data get karva mate
 const getData = async () => {
@@ -29,17 +21,7 @@ const deleteData = async (id) => {
   });
 };
 
-// form ma value leva mate
-const handleSubmit = (e) => {
-  e.preventDefault();
-  let products = {
-    title: document.getElementById("title").value,
-    price: document.getElementById("price").value,
-    img: document.getElementById("img").value,
-    category: document.getElementById("category").value,
-  };
-  createProduct(products);
-};
+
 
 // make uiMaker
 const uimaker = (products) => {
@@ -72,8 +54,7 @@ const uimaker = (products) => {
 };
 
 
-// accsing form
-document.getElementById("productdata").addEventListener("submit", handleSubmit);
+
 
 // for serching
 const Serching = (value) => {
@@ -108,20 +89,20 @@ document
 
 
     // category filter
-// Filter function based on category
+
 const FilterByCategory = (category) => {
-  // If 'all' category is selected, display all products
+
   if (category === "all") {
     uimaker(allProducts);
     return;
   }
 
-  // Filter products by the selected category
+
   let temp = allProducts.filter((ele) => ele.category && ele.category.toLowerCase() === category.toLowerCase());
   uimaker(temp);
 };
 
-// Event listeners for category buttons
+
 document
   .getElementById("kids")
   .addEventListener("click", () => FilterByCategory("kids"));
