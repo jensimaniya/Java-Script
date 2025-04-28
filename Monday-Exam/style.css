@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", cursive;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: flex-start;
+  animation: fadeIn 1.5s ease-out; /* Body fade-in animation */
+}
+
+/* Fade-in effect for the entire body */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 🔥 Header */
+header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #ff5722;
+  padding: 20px 40px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  height: 50px;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+header img.logo {
+  height: 50px;
+  width: auto;
+  animation: logoBounce 1.5s infinite;
+}
+
+@keyframes logoBounce {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(10deg);
+  }
+}
+
+header h1 {
+  font-size: 36px;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 🧾 Form */
+form {
+  background-color: #333;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 320px;
+  animation: formSlideIn 1s ease-out;
+}
+
+@keyframes formSlideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+form input[type="text"],
+form input[type="url"],
+form input[type="number"] {
+  padding: 12px;
+  border: 2px solid #ff5722;
+  border-radius: 8px;
+  font-size: 18px;
+  background-color: #444;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+form input[type="submit"] {
+  background-color: #ff5722;
+  color: white;
+  font-size: 20px;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #ff7043;
+  transform: scale(1.05); /* Button scaling effect */
+}
+
+/*  Product Cards */
+#productList {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+#productList div {
+  background-color: #444;
+  border: 3px solid #ff5722;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#productList img {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 180px;
+  height: 180px;
+}
+
+/*  Title and Price Styling */
+#productList h3::before {
+ 
+  color: #ff5722;
+}
+
+#productList h3 {
+  margin-top: 10px;
+  font-size: 24px;
+  color: #fff;
+}
+
+#productList h5 {
+  font-size: 18px;
+  color: #ff9800;
+}
+
+/*  Sorting Buttons */
+button {
+  background-color: #ff5722;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  animation: buttonBounce 0.6s ease-out infinite;
+}
+
+@keyframes buttonBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+button:hover {
+  background-color: #ff7043;
+  transform: scale(1.05); /* Button scaling effect */
+}
+
+button:focus {
+  outline: none;
+}
+
+#lth {
+  background-color: #f44336;
+}
+
+#lth:hover {
+  background-color: #d32f2f;
+}
+
+#htl {
+  background-color: #d32f2f;
+}
+
+#htl:hover {
+   background-color: #d32f2f;
+}
+
+/* Focus Effect for Active Button */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Search Input Animation */
+input[type="search"] {
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: 2px solid #ff5722;
+  font-size: 18px;
+  background-color: #444;
+  color: white;
+  text-align: center;
+  width: 300px;
+  transition: border 0.3s ease;
+}
+
+input[type="search"]:focus {
+  outline: none;
+  border-color: #ff7043;
+  transform: scale(1.05); /* Input scaling effect on focus */
+}
+
+
+/*  Custom Styled Select Dropdown */
+select {
+  background-color: #ff5722; /* Orange color */
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ff5722;
+  width: 320px;
+  -moz-appearance: none; /* Remove default arrow */
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+select:hover {
+  background-color: #ff7043; /* Lighter orange on hover */
+}
+
+select:focus {
+  outline: none;
+ 
+  transform: scale(1.05); /* Slightly enlarge when focused */
+}
+
+/* Add a custom arrow icon for the select dropdown */
+select::after {
+  content: '\f0d7'; /* FontAwesome downward arrow */
+  font-family: 'FontAwesome';
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  right: 20px;
+  top: 14px;
+  pointer-events: none; /* Prevent the icon from interacting with the user */
+}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+    
+      <h1>Products</h1>
+    </header>
+
+    <form id="productdata">
+      <input type="text" id="title" placeholder="Enter Name" required />
+      <input type="url" id="img" placeholder="Image URL" required />
+      <input type="number" id="price" placeholder="Price" required />
+      <select  id="category">
+        <option value="">select</option>
+        <option value="kids">Kids</option>
+        <option value="women">Women</option>
+        <option value="men">Men</option>
+      </select>
+      <input type="submit" value=" submit" id="type" />
+    </form>
+
+    <input type="search" placeholder="Search" id="search" />
+
+    <button id="lth">Low To High</button>
+    <button id="htl">High To Low</button>
+
+
+    <button id="kids">Kids</button>
+      <button id="women">Women</button>
+      <button id="men">Men</button>
+      <button id="all">All</button>
+
+    <div id="productList"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

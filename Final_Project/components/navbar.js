@@ -1,6 +1,6 @@
 const navbar = () => {
-  return `            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid">
+  return `  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid ">
             <a class="navbar-brand" href="#">Navbar</a>
             <button
               class="navbar-toggler"
@@ -19,7 +19,7 @@ const navbar = () => {
                   <a
                     class="nav-link active"
                     aria-current="page"
-                    href="./index.html"
+                    href="/index.html"
                     >Home</a
                   >
                 </li>
@@ -29,7 +29,7 @@ const navbar = () => {
                   <a
                     class="nav-link active"
                     aria-current="page"
-                    href="./pages/product.html"
+                    href="/pages/product.html"
                     >Product </a
                   >
                 </li>
@@ -38,7 +38,7 @@ const navbar = () => {
                   <a
                     class="nav-link active"
                     aria-current="page"
-                    href="./pages/addproduct.html"
+                    href="/pages/addproduct.html"
                     > Add Product </a
                   >
                 </li>
@@ -46,7 +46,7 @@ const navbar = () => {
                   <a
                     class="nav-link active"
                     aria-current="page"
-                    href="./pages/cart.html"
+                    href="/pages/cart.html"
                     >Cart </a
                   >
                 </li>
@@ -54,7 +54,7 @@ const navbar = () => {
                   <a
                     class="nav-link active"
                     aria-current="page"
-                    href="./pages/signup.html"
+                    href="/pages/signup.html"
                     >Sign Up </a
                   >
                 </li>
@@ -62,7 +62,7 @@ const navbar = () => {
                   <a
                     class="nav-link active"
                     aria-current="page"
-                    href="./pages/login.html"
+                    href="/pages/login.html"
                     >Log In</a
                   >
                 </li>

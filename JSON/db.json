@@ -1,22 +1,32 @@
 {
   "products": [
     {
-      "title": "T-shirts(girl's)",
-      "price": "2000",
-      "img": "https://cutestuff.co.in/cdn/shop/products/Bloomwildbackprintedwomenblue.png?v=1680510770",
-      "id": "2dbf"
+      "id": "bc20",
+      "title": "tshirt",
+      "price": "123",
+      "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
+      "category": "kids"
     },
     {
-      "id": "12de",
-      "title": "yu",
-      "price": "89",
-      "img": "https://www.shaburis.com/cdn/shop/products/il_fullxfull.2742789937_7391_1024x1024.jpg?v=1606517824"
+      "id": "9ee7",
+      "title": "one-peice",
+      "price": "543",
+      "img": "https://punjabiadda.in/cdn/shop/products/BrownBoys_3.jpg?v=1698658954",
+      "category": "women"
     },
     {
-      "title": "ABC",
-      "price": 90000,
+      "id": "e9f2",
+      "title": "shirts",
+      "price": "567",
+      "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
+      "category": "men"
+    },
+    {
+      "id": "4662",
+      "title": "uyt",
+      "price": "987",
       "img": "https://cutestuff.co.in/cdn/shop/products/Bloomwildbackprintedwomenblue.png?v=1680510770",
-      "id": "d309"
+      "category": "men"
     }
   ]
 }
