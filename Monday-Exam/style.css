@@ -11,7 +11,7 @@ body {
   align-items: center;
   height: 100vh;
   justify-content: flex-start;
-  animation: fadeIn 1.5s ease-out; /* Body fade-in animation */
+  animation: fadeIn 1.5s ease-out;
 }
 
 /* Fade-in effect for the entire body */
@@ -24,7 +24,7 @@ body {
   }
 }
 
-/* 🔥 Header */
+/*  Header */
 header {
   display: flex;
   align-items: center;
@@ -68,7 +68,7 @@ header h1 {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* 🧾 Form */
+/*  Form */
 form {
   background-color: #333;
   padding: 20px 30px;
@@ -116,7 +116,7 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
   background-color: #ff7043;
-  transform: scale(1.05); /* Button scaling effect */
+  transform: scale(1.05); 
 }
 
 /*  Product Cards */
@@ -201,7 +201,7 @@ button {
 
 button:hover {
   background-color: #ff7043;
-  transform: scale(1.05); /* Button scaling effect */
+  transform: scale(1.05); 
 }
 
 button:focus {
@@ -246,20 +246,20 @@ input[type="search"] {
 input[type="search"]:focus {
   outline: none;
   border-color: #ff7043;
-  transform: scale(1.05); /* Input scaling effect on focus */
+  transform: scale(1.05); 
 }
 
 
 /*  Custom Styled Select Dropdown */
 select {
-  background-color: #ff5722; /* Orange color */
+  background-color: #ff5722; 
   color: white;
   font-size: 18px;
   padding: 12px;
   border-radius: 8px;
   border: 2px solid #ff5722;
   width: 320px;
-  -moz-appearance: none; /* Remove default arrow */
+  -moz-appearance: none; 
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
@@ -268,24 +268,24 @@ select {
 }
 
 select:hover {
-  background-color: #ff7043; /* Lighter orange on hover */
+  background-color: #ff7043; 
 }
 
 select:focus {
   outline: none;
  
-  transform: scale(1.05); /* Slightly enlarge when focused */
+  transform: scale(1.05); 
 }
 
 /* Add a custom arrow icon for the select dropdown */
 select::after {
-  content: '\f0d7'; /* FontAwesome downward arrow */
+  content: '\f0d7'; 
   font-family: 'FontAwesome';
   color: white;
   font-size: 16px;
   position: absolute;
   right: 20px;
   top: 14px;
-  pointer-events: none; /* Prevent the icon from interacting with the user */
+  pointer-events: none; 
 }
 
