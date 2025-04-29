@@ -1,256 +1,228 @@
-  {
-    "products": [
-      {
-        "id": "bc20",
-        "title": "tshirt",
-        "price": "123",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "kids"
-      },
-      {
-        "id": "9ee7",
-        "title": "one-peice",
-        "price": "543",
-        "img": "https://punjabiadda.in/cdn/shop/products/BrownBoys_3.jpg?v=1698658954",
-        "category": "women"
-      },
-      {
-        "id": "e9f2",
-        "title": "shirts",
-        "price": "567",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "men"
-      },
-      {
-        "id": "4662",
-        "title": "uyt",
-        "price": "987",
-        "img": "https://cutestuff.co.in/cdn/shop/products/Bloomwildbackprintedwomenblue.png?v=1680510770",
-        "category": "men"
-      },
-      {
-        "id": "bc20",
-        "title": "tshirt",
-        "price": "123",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "kids"
-      },
-      {
-        "id": "9ee7",
-        "title": "one-peice",
-        "price": "543",
-        "img": "https://punjabiadda.in/cdn/shop/products/BrownBoys_3.jpg?v=1698658954",
-        "category": "women"
-      },
-      {
-        "id": "e9f2",
-        "title": "shirts",
-        "price": "567",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "men"
-      },
-      {
-        "id": "4662",
-        "title": "uyt",
-        "price": "987",
-        "img": "https://cutestuff.co.in/cdn/shop/products/Bloomwildbackprintedwomenblue.png?v=1680510770",
-        "category": "men"
-      },
-      {
-        "id": "bc20",
-        "title": "tshirt",
-        "price": "123",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "kids"
-      },
-      {
-        "id": "9ee7",
-        "title": "one-peice",
-        "price": "543",
-        "img": "https://punjabiadda.in/cdn/shop/products/BrownBoys_3.jpg?v=1698658954",
-        "category": "women"
-      },
-      {
-        "id": "e9f2",
-        "title": "shirts",
-        "price": "567",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "men"
-      },
-      {
-        "id": "4662",
-        "title": "uyt",
-        "price": "987",
-        "img": "https://cutestuff.co.in/cdn/shop/products/Bloomwildbackprintedwomenblue.png?v=1680510770",
-        "category": "men"
-      },
-      {
-        "id": "bc20",
-        "title": "tshirt",
-        "price": "123",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "kids"
-      },
-      {
-        "id": "9ee7",
-        "title": "one-peice",
-        "price": "543",
-        "img": "https://punjabiadda.in/cdn/shop/products/BrownBoys_3.jpg?v=1698658954",
-        "category": "women"
-      },
-      {
-        "id": "e9f2",
-        "title": "shirts",
-        "price": "567",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "men"
-      },
-      {
-        "id": "4662",
-        "title": "uyt",
-        "price": "987",
-        "img": "https://cutestuff.co.in/cdn/shop/products/Bloomwildbackprintedwomenblue.png?v=1680510770",
-        "category": "men"
-      },
-      {
-        "id": "bc20",
-        "title": "tshirt",
-        "price": "123",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "kids"
-      },
-      {
-        "id": "9ee7",
-        "title": "one-peice",
-        "price": "543",
-        "img": "https://punjabiadda.in/cdn/shop/products/BrownBoys_3.jpg?v=1698658954",
-        "category": "women"
-      },
-      {
-        "id": "e9f2",
-        "title": "shirts",
-        "price": "567",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "men"
-      },
-      {
-        "id": "4662",
-        "title": "uyt",
-        "price": "987",
-        "img": "https://cutestuff.co.in/cdn/shop/products/Bloomwildbackprintedwomenblue.png?v=1680510770",
-        "category": "men"
-      },
-      {
-        "id": "bc20",
-        "title": "tshirt",
-        "price": "123",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "kids"
-      },
-      {
-        "id": "9ee7",
-        "title": "one-peice",
-        "price": "543",
-        "img": "https://punjabiadda.in/cdn/shop/products/BrownBoys_3.jpg?v=1698658954",
-        "category": "women"
-      },
-      {
-        "id": "e9f2",
-        "title": "shirts",
-        "price": "567",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "men"
-      },
-      {
-        "id": "4662",
-        "title": "uyt",
-        "price": "987",
-        "img": "https://cutestuff.co.in/cdn/shop/products/Bloomwildbackprintedwomenblue.png?v=1680510770",
-        "category": "men"
-      },
-      {
-        "id": "bc20",
-        "title": "tshirt",
-        "price": "123",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "kids"
-      },
-      {
-        "id": "9ee7",
-        "title": "one-peice",
-        "price": "543",
-        "img": "https://punjabiadda.in/cdn/shop/products/BrownBoys_3.jpg?v=1698658954",
-        "category": "women"
-      },
-      {
-        "id": "e9f2",
-        "title": "shirts",
-        "price": "567",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "men"
-      },
-      {
-        "id": "4662",
-        "title": "uyt",
-        "price": "987",
-        "img": "https://cutestuff.co.in/cdn/shop/products/Bloomwildbackprintedwomenblue.png?v=1680510770",
-        "category": "men"
-      },
-      {
-        "id": "bc20",
-        "title": "tshirt",
-        "price": "123",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "kids"
-      },
-      {
-        "id": "9ee7",
-        "title": "one-peice",
-        "price": "543",
-        "img": "https://punjabiadda.in/cdn/shop/products/BrownBoys_3.jpg?v=1698658954",
-        "category": "women"
-      },
-      {
-        "id": "e9f2",
-        "title": "shirts",
-        "price": "567",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "men"
-      },
-      {
-        "id": "4662",
-        "title": "uyt",
-        "price": "987",
-        "img": "https://cutestuff.co.in/cdn/shop/products/Bloomwildbackprintedwomenblue.png?v=1680510770",
-        "category": "men"
-      },
-      {
-        "id": "bc20",
-        "title": "tshirt",
-        "price": "123",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "kids"
-      },
-      {
-        "id": "9ee7",
-        "title": "one-peice",
-        "price": "543",
-        "img": "https://punjabiadda.in/cdn/shop/products/BrownBoys_3.jpg?v=1698658954",
-        "category": "women"
-      },
-      {
-        "id": "e9f2",
-        "title": "shirts",
-        "price": "567",
-        "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
-        "category": "men"
-      },
-      {
-        "id": "4662",
-        "title": "uyt",
-        "price": "987",
-        "img": "https://cutestuff.co.in/cdn/shop/products/Bloomwildbackprintedwomenblue.png?v=1680510770",
-        "category": "men"
-      }
-    ]
-  }
+{
+  "products": [
+    {
+      "id": "bc20",
+      "title": "boy's T-shirts",
+      "price": "100",
+      "img": "https://punjabiadda.in/cdn/shop/products/BrownBoys_2_1024x.jpg?v=1698658954",
+      "category": "men"
+    },
+    {
+      "id": "9ee7",
+      "title": "one-peice",
+      "price": "550",
+      "img": "https://fcity.in/images/products/118350903/pdzbk_512.jpg",
+      "category": "women"
+    },
+    {
+      "id": "e9f2",
+      "title": "girl's T-shirts",
+      "price": "250",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCR2rC3dFk3xwIRH53ZvCU5mZMrsDZLvIg-g&s",
+      "category": "women"
+    },
+    {
+      "id": "bc20",
+      "title": "tshirt",
+      "price": "320",
+      "img": "https://5.imimg.com/data5/ANDROID/Default/2023/5/306098827/RU/BN/ZN/159431556/product-jpeg.jpg",
+      "category": "kids"
+    },
+    {
+      "id": "9ee7",
+      "title": "one-peice",
+      "price": "560",
+      "img": "https://punjabiadda.in/cdn/shop/products/BrownBoys_3.jpg?v=1698658954",
+      "category": "women"
+    },
+    {
+      "id": "e9f2",
+      "title": "shirts",
+      "price": "120",
+      "img": "https://www.montecarlo.in/cdn/shop/files/2240401115FS-2-38_6.jpg?v=1721816536",
+      "category": "men"
+    },
+    {
+      "id": "bc20",
+      "title": "boy's Kurta",
+      "price": "900",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs4lJDCMb3pqxHA3MpCzw3be1e2YI2LbRMlzDPqm6sTZTIGWbrE2WLEOzpZxh-kHqHYM0&usqp=CAU",
+      "category": "kids"
+    },
+    {
+      "id": "9ee7",
+      "title": "one-peice",
+      "price": "900",
+      "img": "https://cpimg.tistatic.com/07383974/b/4/Ladies-Partywear-One-Piece-Dresses.jpg",
+      "category": ""
+    },
+    {
+      "id": "e9f2",
+      "title": "shirts",
+      "price": "567",
+      "img": "https://www.handicraft-palace.com/wp-content/uploads/2021/07/red-leaf-design-print-cotton-men-wear-amazing-half-shirt-CMHS-25-1.webp",
+      "category": "men"
+    },
+    {
+      "id": "bc20",
+      "title": "tshirt",
+      "price": "240",
+      "img": "https://m.media-amazon.com/images/I/91COKva+PIL._AC_UY1100_.jpg",
+      "category": "women"
+    },
+    {
+      "id": "9ee7",
+      "title": "one-peice",
+      "price": "540",
+      "img": "https://images.meesho.com/images/products/162557334/m17jm_512.webp",
+      "category": "women"
+    },
+    {
+      "id": "e9f2",
+      "title": "shirts",
+      "price": "560",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSJa7juYRM5vKGOMwHcHdqTjLf7AGtmPdGQg&s",
+      "category": "men"
+    },
+    {
+      "id": "bc20",
+      "title": "tshirt",
+      "price": "100",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZFFz4Joj1Nzw_x1H0MDAMkhrxLEb83OZxGw&s",
+      "category": "kids"
+    },
+    {
+      "id": "9ee7",
+      "title": "one-peice",
+      "price": "540",
+      "img": "https://images.meesho.com/images/products/154768713/ubzyg_512.jpg",
+      "category": "women"
+    },
+    {
+      "id": "e9f2",
+      "title": "shirts",
+      "price": "567",
+      "img": "https://5.imimg.com/data5/SELLER/Default/2023/9/343563523/MV/QE/QR/88905037/white-a-500x500.jpeg",
+      "category": "men"
+    },
+    {
+      "id": "4662",
+      "title": "shorts for men",
+      "price": "907",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4_kolUGmehjzL6ti1svGuf11b3u_DR1v8cA&s",
+      "category": "men"
+    },
+    {
+      "id": "bc20",
+      "title": "tshirt",
+      "price": "123",
+      "img": "https://www.yourprint.in/wp-content/uploads/2024/01/black-7-247x296.jpg",
+      "category": "kids"
+    },
+    {
+      "id": "9ee7",
+      "title": "one-peice",
+      "price": "540",
+      "img": "https://d1ixo36kppfedg.cloudfront.net/faceview/hb/bf/g7f/a9d/imgs/pd/1567237610453_FK-151-originnm80prcnt.jpg",
+      "category": "women"
+    },
+    {
+      "id": "e9f2",
+      "title": "shirts",
+      "price": "567",
+      "img": "https://images.meesho.com/images/products/342421421/pdk2f_512.webp",
+      "category": "men"
+    },
+    {
+      "id": "4662",
+      "title": "shorts for men",
+      "price": "980",
+      "img": "https://www.andamen.com/cdn/shop/files/01_194defb4-77f7-4063-8736-3d56c16c53cc.jpg?v=1743150193",
+      "category": "men"
+    },
+    {
+      "id": "bc20",
+      "title": "tshirt",
+      "price": "120",
+      "img": "https://media.maxfashion.com/i/max/C24KIBBCBASICTEE107BLUELIGHT-C24KIBBCBASICTEE107-MXWIN24270524_01-2100.jpg?$prodimg-d-prt-pdp-2x$&$quality-retina$&fmt=auto&sm=c",
+      "category": "kids"
+    },
+    {
+      "id": "9ee7",
+      "title": "one-peice",
+      "price": "543",
+      "img": "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2024/SEPTEMBER/6/pdPVBzqw_2d1a0e69f4ef452198276481b942ed31.jpg",
+      "category": "women"
+    },
+    {
+      "id": "e9f2",
+      "title": "shirts",
+      "price": "569",
+      "img": "https://www.wessi.com/cdn/shop/files/2_35824e44-d969-4e62-a1c5-88838dc68233.jpg?v=1730980990&width=720",
+      "category": "men"
+    },
+    {
+      "id": "4662",
+      "title": "shorts",
+      "price": "987",
+      "img": "https://rukminim2.flixcart.com/image/850/1000/xif0q/short/s/k/2/m-korean-shorts-2c-jungle-berry-original-imagyh8z7xsbhgcg.jpeg?q=90&crop=false",
+      "category": "men"
+    },
+    {
+      "id": "bc20",
+      "title": "tshirt",
+      "price": "1230",
+      "img": "https://image.uniqlo.com/UQ/ST3/in/imagesgoods/474603/item/ingoods_69_474603_3x4.jpg?width=494",
+      "category": "kids"
+    },
+    {
+      "id": "9ee7",
+      "title": "one-peice",
+      "price": "543",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi0yej3guP-PDfoG6Q3DgaCDurr0314BHZZw&s",
+      "category": "women"
+    },
+    {
+      "id": "e9f2",
+      "title": "shirts",
+      "price": "567",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf52vtqTorKk6-grmeFu4LdgOuEis9ENu4MA&s",
+      "category": "men"
+    },
+    {
+      "id": "4662",
+      "title": "shorts for men",
+      "price": "250",
+      "img": "https://spykar.com/cdn/shop/products/eq84Lb_91-MDSH1BC090GREY-_2.jpg?v=1744976292",
+      "category": "men"
+    },
+    {
+      "id": "bc20",
+      "title": "shorts",
+      "price": "510",
+      "img": "https://apisap.fabindia.com/medias/20147282-01.jpg?context=bWFzdGVyfGltYWdlc3w5Mzc2MXxpbWFnZS9qcGVnfGFERTNMMmhrTkM4ek5ESTRORGsxTnprMU9ERTNOQzh5TURFME56STRNbDh3TVM1cWNHY3xmYmJhZDY2Y2FhZGVmYTNiOTk1MmNlN2YxOGQ1NzNmNjFkOTBlMTdkMWRiYzY1Mjk2MzY4MTJiNGQ1M2VmMGFj",
+      "category": "women"
+    },
+    {
+      "id": "9ee7",
+      "title": "scart",
+      "price": "1200",
+      "img": "https://i.pinimg.com/236x/8d/63/1c/8d631c741a313427f4094d40e7f3f2fd.jpg",
+      "category": "women"
+    },
+    {
+      "id": "e9f2",
+      "title": "shirts",
+      "price": "450",
+      "img": "https://peplosjeans.in/cdn/shop/files/2_1ddf0b20-3e6d-471c-b4c0-ae96729df9ba.jpg?v=1716891444",
+      "category": "men"
+    },
+    {
+      "id": "4662",
+      "title": "uyt",
+      "price": "740",
+      "img": "https://www.textileinfomedia.com/img/eigi/casual-wear-multi-color-boys-t-shirt-full.jpg",
+      "category": "men"
+    }
+  ]
+}

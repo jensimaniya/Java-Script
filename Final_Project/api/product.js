@@ -1,14 +1,12 @@
 import { api } from "../config/api.js";
 
-export const productMethods = {
+export const productmethod = {
   getAll: async () => {
     let req = await fetch(api.products);
     let res = await req.json();
     return res;
   },
   post: async (data) => {
-    // console.log(data);
-    
     await fetch(api.products, {
       method: "POST",
       headers: {
@@ -26,12 +24,13 @@ export const productMethods = {
       body: JSON.stringify(data),
     });
   },
+
   delete: async (id) => {
     await fetch(`${api.products}/${id}`, {
       method: "DELETE",
     });
   },
-  getById: async (id) => {
+  getbyid: async (id) => {
     let req = await fetch(`${api.products}/${id}`);
     let res = await req.json();
     return res;
