@@ -289,3 +289,10 @@ select::after {
   pointer-events: none; 
 }
 
+
+.main{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
