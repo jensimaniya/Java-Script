@@ -26,3 +26,7 @@ console.log(j + e - s);
 console.log(Number(j) + Number(e) - s);
 
 
+
+
+document.write("<br/>")
+document.write("hello");

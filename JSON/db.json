@@ -1,11 +1,10 @@
 {
   "products": [
     {
-      "id": "bc20",
       "title": "boy's T-shirts",
-      "price": "100",
+      "price": "200",
       "img": "https://punjabiadda.in/cdn/shop/products/BrownBoys_2_1024x.jpg?v=1698658954",
-      "category": "men"
+      "id": "bc20"
     },
     {
       "id": "9ee7",
@@ -103,13 +102,6 @@
       "title": "shirts",
       "price": "567",
       "img": "https://5.imimg.com/data5/SELLER/Default/2023/9/343563523/MV/QE/QR/88905037/white-a-500x500.jpeg",
-      "category": "men"
-    },
-    {
-      "id": "4662",
-      "title": "shorts for men",
-      "price": "907",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4_kolUGmehjzL6ti1svGuf11b3u_DR1v8cA&s",
       "category": "men"
     },
     {
