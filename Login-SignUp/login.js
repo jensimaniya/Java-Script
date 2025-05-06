@@ -26,9 +26,7 @@ const handleSubmit = (e) => {
     if (userData.user.password == user.password) {
       // alert("Login SuccessFully...");
       SuccessFully.style.display = "inline-block";
-      setTimeout(() => {
-        window.location.href = "/Clothing/HomePage/Home.html";
-      }, 1500);
+     
     } else {
       // alert("Invalid password");
       passregex.innerHTML = "Invalid Password";

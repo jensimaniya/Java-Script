@@ -60,9 +60,6 @@ button:hover {
 #success,
 #newuser,
 #alreday {
-  /* position: absolute;
-  top: 90px;
-  right: 650px; */
   display: none;
   padding: 15px 20px;
   border-radius: 10px;
