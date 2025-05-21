@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID-19 Live Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🌍 COVID-19 Live Tracker</h1>
+
+      <div class="dropdown-wrapper">
+        <label for="country-select">Select Country:</label>
+        <select id="country-select">
+          <option value="global">🌐 Global</option>
+        </select>
+      </div>
+
+      <div id="stats" class="stats-grid">
+        <div class="card cases">
+          <h2>Cases</h2>
+          <p id="cases">Loading...</p>
+        </div>
+        <div class="card deaths">
+          <h2>Deaths</h2>
+          <p id="deaths">Loading...</p>
+        </div>
+        <div class="card recovered">
+          <h2>Recovered</h2>
+          <p id="recovered">Loading...</p>
+        </div>
+      </div>
+
+      <div class="loader" id="loader"></div>
+      <p class="error" id="error"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
